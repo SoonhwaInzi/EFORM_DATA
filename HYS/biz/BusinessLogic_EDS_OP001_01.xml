@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BusinessLogicXML id="EDS_OP001_01" version="33.0" title="종합계좌개설_개인">
+<BusinessLogicXML id="EDS_OP001_01" version="33.5" title="종합계좌개설_개인">
  <OpenForms>
   <FormInfo documentId="1" formId="30100001" replace="false" />
   <FormInfo documentId="1" formId="30100002" replace="false" />
@@ -499,11 +499,11 @@
   </SetValueToDocumentMethod>
   <!-- Q1 : 연령 / 총자본금 -->
   <SetValueToDocumentMethod T_FieldId="2145_D1질문1" method="SetValueToDocument">
-   <FieldInfo documentId="1" formId="30100001" id="AGE_19" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="AGE_65_OVER" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="AGE_64" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="AGE_30" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="AGE_54" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100001" id="AGE_19" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="AGE_65_OVER" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="AGE_64" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="AGE_30" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="AGE_54" type="radio" value="" runReactionRule="false" />
    <JavaScript id="numToFiveCheck" />
   </SetValueToDocumentMethod>
   <!-- Q2 : 투자 가능 기간 -->
@@ -526,11 +526,11 @@
   </SetValueToDocumentMethod>
   <!-- Q4 : 금융상품 경험기간 -->
   <SetValueToDocumentMethod T_FieldId="2145_D1질문4" method="SetValueToDocument">
-   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_0" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_12" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_36" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_60" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_60_OVER" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_0" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_12" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_36" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_60" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="INVS_EXP_PER_60_OVER" type="radio" value="" runReactionRule="false" />
    <JavaScript id="numToFiveCheck" />
   </SetValueToDocumentMethod>
   <!-- Q5 : 금융투자상품 취득,처분목적 -->
@@ -544,10 +544,10 @@
   </SetValueToDocumentMethod>
   <!-- Q6 : 금융투자지식수준 -->
   <SetValueToDocumentMethod T_FieldId="2145_D1질문6" method="SetValueToDocument">
-   <FieldInfo documentId="1" formId="30100001" id="BSIC_0_CLAS" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="BSIC_1_CLAS" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="BSIC_2_CLAS" type="radio" value="" />
-   <FieldInfo documentId="1" formId="30100001" id="BSIC_3_CLAS" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100001" id="BSIC_0_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="BSIC_1_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="BSIC_2_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100001" id="BSIC_3_CLAS" type="radio" value="" runReactionRule="false" />
    <JavaScript id="numToFourCheck" />
   </SetValueToDocumentMethod>
   <!-- Q7 : 투자수익위험태도 -->
@@ -1648,7 +1648,7 @@
      <FieldInfo documentId="1" formId="30100001" id="VNR_5" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_Y" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_N" type="radio" essential="true" />
-     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="true" />
+     <!--FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="radio" essential="true" />
@@ -1659,7 +1659,7 @@
      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="radio" essential="true" />
-     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="true" /-->
      <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" essential="true" />
     </Action>
     <ElseReaction>
@@ -1671,7 +1671,7 @@
       <FieldInfo documentId="1" formId="30100001" id="VNR_5" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_Y" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_N" type="radio" essential="false" />
-      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="false" />
+      <!--FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="radio" essential="false" />
@@ -1682,7 +1682,7 @@
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="radio" essential="false" />
-      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="false" /-->
       <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" essential="false" />
      </Action>
      <Action method="SetValue">
@@ -2994,16 +2994,53 @@
     <Condition>
      <JavaScript id="isCheckTrue" />
     </Condition>
+    <!-- 2024.02.27 원현정 주임 요구사항 -->
+    <Action method="LoadForm">
+     <FormInfo documentId="1" formId="30100040" replace="false" oldDocumentId="" />
+    </Action>
     <Action method="SetEssential">
      <FieldInfo documentId="1" formId="30100001" id="IDNTY_DRVT" type="check" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="P_DRVT_MNGR_NM" type="pen" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="P_DRVT_MNGR_SIGN" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100040" id="ACNO" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" essential="true" />
     </Action>
     <ElseReaction>
      <Action method="SetEssential">
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_DRVT" type="check" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="P_DRVT_MNGR_NM" type="pen" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="P_DRVT_MNGR_SIGN" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" essential="false" />
+     </Action>
+     <Action method="DeleteForm">
+      <FormInfo documentId="1" formId="30100040" replace="false" oldDocumentId="" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+   <!--  30100040 대리인일 경우  -->
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100001" id="AGT_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setValue(check, agt) { return (check == "true" && agt != "") ? "true" : "false"; }]]></JavaScript>
+    </Condition>
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" value="false" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" value="false" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" value="true" />
+     <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" value="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="ShowHideField">
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" value="true" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" value="true" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" value="false" />
+      <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" value="false" />
      </Action>
     </ElseReaction>
    </Reaction>
@@ -3193,6 +3230,7 @@
      <FieldInfo documentId="1" formId="30100012" id="P_CUST_NM" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100013" id="P_CUST_NM" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100015" id="P_CUST_NM" type="pen" value="false" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100055" id="P_CUST_NM" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100067" id="P_CUST_NM" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100001" id="P_CUST_SIGN_1" type="pen" value="false" />
@@ -3211,6 +3249,7 @@
      <FieldInfo documentId="1" formId="30100012" id="P_CUST_SIGN" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100013" id="P_CUST_SIGN" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100015" id="P_CUST_SIGN" type="pen" value="false" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100055" id="P_CUST_SIGN" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100067" id="P_CUST_SIGN" type="pen" value="false" />
      <FieldInfo documentId="1" formId="30100001" id="P_CUST_NM_1_AGT" type="pen" value="true" />
@@ -3227,6 +3266,7 @@
      <FieldInfo documentId="1" formId="30100012" id="P_CUST_NM_AGT" type="pen" value="true" />
      <FieldInfo documentId="1" formId="30100013" id="P_CUST_NM_AGT" type="pen" value="true" />
      <FieldInfo documentId="1" formId="30100015" id="P_CUST_NM_AGT" type="pen" value="true" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" value="true" />
      <FieldInfo documentId="1" formId="30100055" id="P_CUST_NM_AGT" type="pen" value="true" />
      <FieldInfo documentId="1" formId="30100067" id="P_CUST_NM_AGT" type="pen" value="true" />
      <FieldInfo documentId="1" formId="30100001" id="CUST_STP_1" type="image" value="true" />
@@ -3244,6 +3284,7 @@
      <FieldInfo documentId="1" formId="30100012" id="CUST_STP" type="image" value="true" />
      <FieldInfo documentId="1" formId="30100013" id="CUST_STP" type="image" value="true" />
      <FieldInfo documentId="1" formId="30100015" id="CUST_STP" type="image" value="true" />
+     <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" value="true" />
      <FieldInfo documentId="1" formId="30100055" id="CUST_STP" type="image" value="true" />
      <FieldInfo documentId="1" formId="30100067" id="CUST_STP" type="image" value="true" />
      <FieldInfo documentId="1" formId="30100001" id="AGT_NLT" type="edit" value="true" />
@@ -3280,6 +3321,10 @@
      <FieldInfo documentId="1" formId="30100003" id="P_AGT_SIGN" type="pen" essential="true" />
      <FieldInfo documentId="1" formId="30100025" id="P_AGT_NM" type="pen" essential="true" />
      <FieldInfo documentId="1" formId="30100025" id="P_AGT_SIGN" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" essential="false" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" essential="false" />
+     <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" essential="true" />
+     <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" essential="true" />
     </Action>
     <ElseReaction>
      <Action method="SetEssential">
@@ -3310,6 +3355,10 @@
       <FieldInfo documentId="1" formId="30100003" id="P_AGT_SIGN" type="pen" essential="false" />
       <FieldInfo documentId="1" formId="30100025" id="P_AGT_NM" type="pen" essential="false" />
       <FieldInfo documentId="1" formId="30100025" id="P_AGT_SIGN" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" essential="false" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" essential="true" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" essential="true" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" essential="false" />
      </Action>
      <Action method="ShowHideField">
       <FieldInfo documentId="1" formId="30100001" id="P_CUST_NM_1" type="pen" value="true" />
@@ -3327,6 +3376,7 @@
       <FieldInfo documentId="1" formId="30100012" id="P_CUST_NM" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100013" id="P_CUST_NM" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100015" id="P_CUST_NM" type="pen" value="true" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100055" id="P_CUST_NM" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100067" id="P_CUST_NM" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100001" id="P_CUST_SIGN_1" type="pen" value="true" />
@@ -3345,6 +3395,7 @@
       <FieldInfo documentId="1" formId="30100012" id="P_CUST_SIGN" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100013" id="P_CUST_SIGN" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100015" id="P_CUST_SIGN" type="pen" value="true" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100055" id="P_CUST_SIGN" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100067" id="P_CUST_SIGN" type="pen" value="true" />
       <FieldInfo documentId="1" formId="30100001" id="P_CUST_NM_1_AGT" type="pen" value="false" />
@@ -3361,6 +3412,7 @@
       <FieldInfo documentId="1" formId="30100012" id="P_CUST_NM_AGT" type="pen" value="false" />
       <FieldInfo documentId="1" formId="30100013" id="P_CUST_NM_AGT" type="pen" value="false" />
       <FieldInfo documentId="1" formId="30100015" id="P_CUST_NM_AGT" type="pen" value="false" />
+      <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM_AGT" type="pen" value="false" />
       <FieldInfo documentId="1" formId="30100055" id="P_CUST_NM_AGT" type="pen" value="false" />
       <FieldInfo documentId="1" formId="30100067" id="P_CUST_NM_AGT" type="pen" value="false" />
       <FieldInfo documentId="1" formId="30100001" id="CUST_STP_1" type="image" value="false" />
@@ -3378,6 +3430,7 @@
       <FieldInfo documentId="1" formId="30100012" id="CUST_STP" type="image" value="false" />
       <FieldInfo documentId="1" formId="30100013" id="CUST_STP" type="image" value="false" />
       <FieldInfo documentId="1" formId="30100015" id="CUST_STP" type="image" value="false" />
+      <FieldInfo documentId="1" formId="30100040" id="CUST_STP" type="image" value="false" />
       <FieldInfo documentId="1" formId="30100055" id="CUST_STP" type="image" value="false" />
       <FieldInfo documentId="1" formId="30100067" id="CUST_STP" type="image" value="false" />
       <FieldInfo documentId="1" formId="30100001" id="AGT_NLT" type="edit" value="false" />
@@ -4670,6 +4723,11 @@
    <!-- 2151 -->
    <SetValueToTerminalMethod T_FieldId="2151_T1계좌번호">
     <FieldInfo documentId="1" formId="30100001" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!--  2148  -->
+   <SetValueToTerminalMethod T_FieldId="2148_D1실명확인번호" skipNullCheck="true">
+    <FieldInfo documentId="1" formId="30100001" id="ACNO" type="edit" value="" />
+    <JavaScript id="makeOnlyNum" />
    </SetValueToTerminalMethod>
   </SetValueToTerminalScreen>
  </SetValueToTerminalActions>
