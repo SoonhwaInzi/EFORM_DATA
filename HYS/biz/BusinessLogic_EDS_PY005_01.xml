@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessLogicXML id="EDS_PY005_01" version="0.5" title="매수주문표_매수주문">
+ <OpenForms>
+  <FormInfo documentId="1" formId="30100104" replace="false" />
+ </OpenForms>
+ <EssentialFields />
+ <PlaceHolderFields />
+ <!-- ******************** 단말 -> 서식 전송 ******************** -->
+ <SetValueToDocumentMethods>
+  <!-- 직원정보 -->
+  <SetValueToDocumentMethod T_FieldId="emp_nm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100104" id="emp_nm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_brnm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100104" id="emp_brnm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_no" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100104" id="emp_no" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_position" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100104" id="emp_position" type="edit" value="" />
+  </SetValueToDocumentMethod>
+ </SetValueToDocumentMethods>
+ <!-- ******************** 서식 필드에 값이 입력되면 입력된 값에 따라 해야 할 일들을 정의 ******************** -->
+ <ReactionRules>
+  <!-- 연락처 -->
+  <SetValueCompleteField documentId="1" formId="30100104" fieldId="TLNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100104" id="TLNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkPhoneNum" />
+    </Action>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100104" id="TLNO" type="edit" usage="parameter" />
+     <FieldInfo documentId="1" formId="30100104" id="tlno_1" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100104" id="tlno_2" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100104" id="tlno_3" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="divPhoneNum" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 계좌번호 -->
+  <SetValueCompleteField documentId="1" formId="30100104" fieldId="ACNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100104" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkAcno" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+ </ReactionRules>
+ <!-- ******************** 서식 -> 단말 전송 ******************** -->
+ <SetValueToTerminalActions>
+  <!-- 전자문서를 호출한 단말 화면번호 -->
+  <MainTerminalScreenNo>1000</MainTerminalScreenNo>
+  <SetValueToTerminalScreen screenNo="1000">
+   <!-- M   E   T   A -->
+   <SetValueToTerminalMethod T_FieldId="meta_accNo">
+    <FieldInfo documentId="1" formId="30100104" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 1000 -->
+   <SetValueToTerminalMethod T_FieldId="1000_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100104" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+  </SetValueToTerminalScreen>
+ </SetValueToTerminalActions>
+ <!-- ******************** 서식로드 이후에 해야 할 일을 정의 ******************** -->
+ <ProcessAfterFormLoadComplete />
+ <!-- ******************** 작성완료를 진행할 수 있는지 여부를 정의 ******************** -->
+</BusinessLogicXML>

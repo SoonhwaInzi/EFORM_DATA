@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessLogicXML id="EDS_IN001_01" version="2.2" title="종합서비스">
+ <OpenForms>
+  <FormInfo documentId="1" formId="30100041" replace="false" />
+ </OpenForms>
+ <EssentialFields>
+  <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100041" id="CUST_NM" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100041" id="P_CUST_NM_4" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100041" id="P_CUST_SIGN_4" type="edit" value="" />
+ </EssentialFields>
+ <PlaceHolderFields />
+ <!-- ******************** 단말 -> 서식 전송 ******************** -->
+ <SetValueToDocumentMethods>
+  <!-- 직원정보 -->
+  <SetValueToDocumentMethod T_FieldId="emp_nm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100041" id="emp_nm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_brnm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100041" id="emp_brnm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_no" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100041" id="emp_no" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_position" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100041" id="emp_position" type="edit" value="" />
+  </SetValueToDocumentMethod>
+ </SetValueToDocumentMethods>
+ <!-- ******************** 서식 필드에 값이 입력되면 입력된 값에 따라 해야 할 일들을 정의 ******************** -->
+ <ReactionRules>
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="CUST_NM">
+   <Reaction>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100041" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100041" id="P_CUST_NM_2" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100041" id="P_CUST_NM_4" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 주소변경 시 주소입력란 활성화 및 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="CHG_ADDR">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_1" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_2" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_3" type="edit" value="true" />
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_1" type="edit" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_1" type="edit" essential="false" />
+     </Action>
+     <Action method="ShowHideField">
+      <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_1" type="edit" value="false" />
+      <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_2" type="edit" value="false" />
+      <FieldInfo documentId="1" formId="30100041" id="CHG_RSN_ADDR_3" type="edit" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 연락처변경 시 연락처입력란 활성화 및 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="CHG_TLNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100041" id="TLNO" type="edit" value="true" />
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="TLNO" type="edit" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="TLNO" type="edit" essential="false" />
+     </Action>
+     <Action method="ShowHideField">
+      <FieldInfo documentId="1" formId="30100041" id="TLNO" type="edit" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="TLNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100041" id="TLNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkPhoneNum" />
+    </Action>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100041" id="TLNO" type="edit" usage="parameter" />
+     <FieldInfo documentId="1" formId="30100041" id="tel_1" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100041" id="tel_2" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100041" id="tel_3" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="divPhoneNum" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 반송등록, 통합해지, 정기폐쇄해지 시 등록/해지사유 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="REG_RETUR,CNCLTN_AC,CNCLTN_CLSG">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100041" id="REG_RETUR" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="CNCLTN_AC" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="CNCLTN_CLSG" type="check" value="" />
+     <JavaScript><![CDATA[function checkToMpno(empty, value1, value2, value3)
+            {
+              return (value1 == "false" && value2 == "false" && value3 == "false") ? false : true;
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="REG_RSN" type="edit" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="REG_RSN" type="edit" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 재발급 시 변경내용, 수령확인 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="STCD,BKB,REAPLY_OTP,SCCD">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100041" id="STCD" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="BKB" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="REAPLY_OTP" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="SCCD" type="check" value="" />
+     <JavaScript><![CDATA[function checkToMpno(empty, value1, value2, value3, value4)
+            {
+              return (value1 == "false" && value2 == "false" && value3 == "false" && value4 == "false") ? false : true;
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="P_CUST_SIGN_1" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="CHG_RSN" type="edit" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="P_CUST_SIGN_1" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="CHG_RSN" type="edit" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- HTS 선택 시 HTS 접속 ID, MTS 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_HTS">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_USER_ID" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="P_CUST_NM_2" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_MTS" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="TRMS_HTS" type="check" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_USER_ID" type="edit" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="P_CUST_NM_2" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_MTS" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="TRMS_HTS" type="check" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2372 : 타기관 OTP생성기 등록 선택 시 입력 활성/비활성 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_OTP">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_VEND" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_SN" type="edit" value="true" />
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_VEND" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_SN" type="edit" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_VEND" type="edit" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_SN" type="edit" essential="false" />
+     </Action>
+     <Action method="ShowHideField">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_VEND" type="edit" value="false" />
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_SN" type="edit" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_OTP_VEND,ADDS_OTP_SN">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_VEND" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_SN" type="edit" value="" />
+     <JavaScript><![CDATA[function setValue(empty, value1, value2)
+              {
+                return (value1=="" && value2=="") ? "false" : "true";
+              }]]></JavaScript>
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP" type="check" value="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP" type="check" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 은행이체서비스 선택 시 입력 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_TRSF_APLY,ADDS_TRSF_CNCLTN">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_APLY" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_CNCLTN" type="check" value="" />
+     <JavaScript><![CDATA[function checkToMpno(empty, value1, value2)
+            {
+              return (value1 == "false" && value2 == "false") ? false : true;
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_BANK_1" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_ACNO_1" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="TRMS_TRSF" type="check" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_BANK_1" type="edit" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_ACNO_1" type="edit" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="TRMS_TRSF" type="check" essential="false" />
+     </Action>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_BANK_1" type="edit" value="" />
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_ACNO_1" type="edit" value="" />
+      <FieldInfo documentId="1" formId="30100041" id="TRMS_TRSF" type="check" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2438 : 이체한도 변경 선택 시 입력 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_TRSF_LIMI">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_NO_1" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_DD_1" type="edit" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_NO_1" type="edit" essential="false" />
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_DD_1" type="edit" essential="false" />
+     </Action>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_NO_1" type="edit" value="" />
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_DD_1" type="edit" value="" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_TRSF_LIMI_NO_1,ADDS_TRSF_LIMI_DD_1">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_NO_1" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_DD_1" type="edit" value="" />
+     <JavaScript><![CDATA[function setValue(empty, value1, value2)
+              {
+                return (value1=="" && value2=="") ? "false" : "true";
+              }]]></JavaScript>
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI" type="check" value="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI" type="check" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2438 : 한도 무제한 -->
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_TRSF_LIMI_NO_1">
+   <Reaction>
+    <Condition>
+     <JavaScript><![CDATA[function setValue(value)
+              {
+                return (value == "0") ? "true" : "false";
+              }]]></JavaScript>
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_NO_1" type="edit" value="무제한" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100041" fieldId="ADDS_TRSF_LIMI_DD_1">
+   <Reaction>
+    <Condition>
+     <JavaScript><![CDATA[function setValue(value)
+              {
+                return (value == "0") ? "true" : "false";
+              }]]></JavaScript>
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_DD_1" type="edit" value="무제한" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+ </ReactionRules>
+ <!-- ******************** 서식 -> 단말 전송 ******************** -->
+ <SetValueToTerminalActions>
+  <!-- 전자문서를 호출한 단말 화면번호 -->
+  <MainTerminalScreenNo>2145</MainTerminalScreenNo>
+  <SetValueToTerminalScreen screenNo="2145">
+   <!-- M   E   T   A -->
+   <SetValueToTerminalMethod T_FieldId="meta_custNm">
+    <FieldInfo documentId="1" formId="30100041" id="CUST_NM" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="meta_accNo">
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 2112 -->
+   <SetValueToTerminalMethod T_FieldId="2112_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="CHG_ADDR" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="CHG_TLNO" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="CHG_ETC" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(std1, std2, std3, value)
+          {	
+            return (std1 == "false" && std2 == "false" && std3 == "false") ? "" : value;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2117 -->
+   <SetValueToTerminalMethod T_FieldId="2117_D1종합계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="CHG_PSWD" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2117_D1등록사유내용">
+    <FieldInfo documentId="1" formId="30100041" id="CHG_PSWD" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="CHG_RSN" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <!-- 2100 -->
+   <SetValueToTerminalMethod T_FieldId="2100_D1처리구분">
+    <FieldInfo documentId="1" formId="30100041" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {	
+            return "2";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2100_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 2418 : 고객 HTS 등 통신매체 등록/해지 -->
+   <SetValueToTerminalMethod T_FieldId="2418_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_USER_ID" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2418_D2실명확인번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_USER_ID" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="cus_reg_no" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2418_D1매체종류코드">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_USER_ID" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="tmp" type="radio" value="" />
+    <JavaScript><![CDATA[function setValue(std, tmp) 
+          {
+            return (std == "") ? "" : "01";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2418_D2전자금융사용자ID">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_USER_ID" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2418_D2기타우편물통보주소유형코드">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_USER_ID" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="tmp" type="radio" value="" />
+    <JavaScript><![CDATA[function setValue(std, tmp) 
+          {
+            return (std == "") ? "" : "09";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2438 : 계좌이체대체한도등록/변경 -->
+   <SetValueToTerminalMethod T_FieldId="2438_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2438_D1일회한도금액">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_NO_1" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(value) 
+          {
+            return (value == "무제한") ? "999999999999999" : value;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2438_D1일일한도금액">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_LIMI_DD_1" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(value) 
+          {
+            return (value == "무제한") ? "999999999999999" : value;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2369 : 보안카드 -->
+   <SetValueToTerminalMethod T_FieldId="2369_D1처리구분">
+    <FieldInfo documentId="1" formId="30100041" id="CNCLTN_SCCD" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SCCD" type="radio" value="" />
+    <JavaScript><![CDATA[function stdCheck(value1, value2)
+          {
+            if(value1=="true") return "5";
+            if(value2=="true") return "1";
+            return "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2369_D1고객구분">
+    <FieldInfo documentId="1" formId="30100041" id="CNCLTN_SCCD" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SCCD" type="radio" value="" />
+    <JavaScript><![CDATA[function stdCheck(value1, value2)
+          {
+            return (value1 == "false" && value2 == "false") ? "" : "2";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2369_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="CNCLTN_SCCD" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SCCD" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function stdCheck(std1, std2, value)
+          {
+            return (std1 == "false" && std2 == "false") ? "" : value;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2371 : OTP 생성기 발급 -->
+   <SetValueToTerminalMethod T_FieldId="2371_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100041" id="OTP" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="CNCLTN_OTP" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="cus_reg_no" type="edit" value="" />
+    <JavaScript><![CDATA[function stdCheck(std1, std2, value)
+          {
+            return (std1 == "false" && std2 == "false") ? "" : value;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2371_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="OTP" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="CNCLTN_OTP" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function stdCheck(std1, std2, value)
+          {
+            return (std1 == "false" && std2 == "false") ? "" : value;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2371_D1통합OTP일련번호">
+    <FieldInfo documentId="1" formId="30100041" id="OTP" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="CNCLTN_OTP" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_SN" type="edit" value="" />
+    <JavaScript><![CDATA[function stdCheck(std1, std2, value)
+          {
+            return (std1 == "false" && std2 == "false") ? "" : value;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2372 : 타기관 OTP -->
+   <SetValueToTerminalMethod T_FieldId="2372_D1통합OTP일련번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_SN" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2372_D1벤더코드">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_OTP_VEND" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 3166 -->
+   <SetValueToTerminalMethod T_FieldId="3166_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 2396 : SMS서비스 등록/해지(업무별) -->
+   <SetValueToTerminalMethod T_FieldId="2396_D1처리구분">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(std1, tmp) 
+          {
+            return (std1=="") ? "" : "1";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1이동전화식별번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="tel_1" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1이동전화국번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="tel_2" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1이동전화일련번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="tel_3" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1구분문자1">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_CCUS_NO" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_CCUS_ALL" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_CCUS_END" type="radio" value="" />
+    <JavaScript id="threeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1구분문자2">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_BSIC_TKMNY" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1구분문자3">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_BSIC_PAY" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1구분문자4">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_BSIC_RIT" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1구분문자6">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_BSIC_AC" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2396_D1구분문자7">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_SMS_BSIC_FINC" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <!-- 2404 : 계좌이체약정 -->
+   <SetValueToTerminalMethod T_FieldId="2404_D1종합계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_ACNO_1" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2404_D1은행계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ADDS_TRSF_ACNO_1" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 3166 : 잔고확인서발급 -->
+   <SetValueToTerminalMethod T_FieldId="3166_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="3166_D1발급용도">
+    <FieldInfo documentId="1" formId="30100041" id="REG_RSN" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 2601 : 통폐합해지 -->
+   <SetValueToTerminalMethod T_FieldId="2601_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2601_D1해지사유내용">
+    <FieldInfo documentId="1" formId="30100041" id="REG_RSN" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 2312 : 통장발급 -->
+   <SetValueToTerminalMethod T_FieldId="2312_D1개별계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 2330 : IC카드발급 -->
+   <SetValueToTerminalMethod T_FieldId="2330_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100041" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+  </SetValueToTerminalScreen>
+ </SetValueToTerminalActions>
+ <!-- ******************** 서식로드 이후에 해야 할 일을 정의 ******************** -->
+ <ProcessAfterFormLoadComplete />
+ <!-- ******************** 작성완료를 진행할 수 있는지 여부를 정의 ******************** -->
+</BusinessLogicXML>

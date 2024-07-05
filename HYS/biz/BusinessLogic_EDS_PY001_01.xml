@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessLogicXML id="EDS_PY001_01" version="1.7" title="입금(3001)">
+ <OpenForms>
+  <FormInfo documentId="1" formId="30100900" replace="false" />
+ </OpenForms>
+ <EssentialFields>
+  <FieldInfo documentId="1" formId="30100900" id="DPST_ACNO" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100900" id="DPST_AMUT" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100900" id="P_DPST_CUST_NM" type="edit" value="" />
+ </EssentialFields>
+ <PlaceHolderFields />
+ <HiddenFields>
+  <FieldInfo documentId="1" formId="30100900" id="DTYY" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100900" id="DTMM" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100900" id="DTDD" type="edit" value="" />
+ </HiddenFields>
+ <!-- ******************** 단말 -> 서식 전송 ******************** -->
+ <SetValueToDocumentMethods>
+  <!-- 직원정보 -->
+  <SetValueToDocumentMethod T_FieldId="emp_nm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="emp_nm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_brnm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="emp_brnm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_no" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="emp_no" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_position" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="emp_position" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <!-- 3001 -->
+  <SetValueToDocumentMethod T_FieldId="3001_D1계좌번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_ACNO" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001_D1현금금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_CASH" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001_D1수표금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_CECK" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001_D1기타수표금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_CECK_ETC" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001_D1총입금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_AMUT" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001_D1실명확인번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_N_BKB_IDNO" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <!-- 3001E -->
+  <SetValueToDocumentMethod T_FieldId="3001E_D9상품유형명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_TYPE" type="edit" value="" />
+   <FieldInfo documentId="1" formId="30100900" id="check_print" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9적요명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_ABS_NM" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9계좌번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_ACNO" type="edit" value="" />
+   <JavaScript id="checkAcno" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9계좌명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_ACNM" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9예수금전잔금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_BFR_AMUT" type="edit" value="" />
+   <JavaScript id="checkMoney" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9예수금금잔금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_AFTR_AMUT" type="edit" value="" />
+   <JavaScript id="checkMoney" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9승인처리ID" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_USER_ID" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9현금입금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_AMUT" type="edit" value="" />
+   <JavaScript id="checkMoney" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9현금입금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_CASH" type="edit" value="" />
+   <JavaScript id="checkQtt" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9수표입금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_CECK_AMUT" type="edit" value="" />
+   <JavaScript id="checkMoney" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9수표입금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_CECK" type="edit" value="" />
+   <JavaScript id="checkQtt" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9기타수표입금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_CECK_ETC_AMUT" type="edit" value="" />
+   <JavaScript id="checkMoney" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9기타수표입금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="DPST_CECK_ETC" type="edit" value="" />
+   <JavaScript id="checkQtt" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9변제합" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_RPAY_AMUT" type="edit" value="" />
+   <JavaScript id="checkMoney" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9연체료변제합계금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_LATEF_AMUT" type="edit" value="" />
+   <JavaScript id="checkMoney" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9입금의뢰인명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_CUST_NM" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9처리일" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_DATE" type="edit" value="" />
+   <JavaScript id="checkDate" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9처리시각" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_TIME" type="edit" value="" />
+   <JavaScript id="checkTime" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9출납번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_NO_1" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9처리지점" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_BRC_NO" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9사용자ID" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_BRC_ID" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="3001E_D9전표번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100900" id="V_NO" type="edit" value="" />
+  </SetValueToDocumentMethod>
+ </SetValueToDocumentMethods>
+ <!-- ******************** 서식 필드에 값이 입력되면 입력된 값에 따라 해야 할 일들을 정의 ******************** -->
+ <ReactionRules>
+  <!-- 연락처 -->
+  <SetValueCompleteField documentId="1" formId="30100900" fieldId="DPST_N_BKB_TLNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100900" id="DPST_N_BKB_TLNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkPhoneNum" />
+    </Action>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100900" id="DPST_N_BKB_TLNO" type="edit" usage="parameter" />
+     <FieldInfo documentId="1" formId="30100900" id="tlno_1" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100900" id="tlno_2" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100900" id="tlno_3" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="divPhoneNum" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 실명확인번호 -->
+  <SetValueCompleteField documentId="1" formId="30100900" fieldId="DPST_N_BKB_IDNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100900" id="DPST_N_BKB_IDNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkRegno" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 계좌번호 -->
+  <SetValueCompleteField documentId="1" formId="30100900" fieldId="TKMNY_ACNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100900" id="TKMNY_ACNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkAcno" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100900" fieldId="DPST_ACNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100900" id="DPST_ACNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkAcno" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 통장프린트 보이기 -->
+  <SetValueCompleteField documentId="1" formId="30100900" fieldId="check_print">
+   <Reaction>
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100900" id="K_1" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_2" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_3" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_4" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_5" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_6" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_7" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_8" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_9" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_10" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_11" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_12" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_13" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_14" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_TYPE" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_ABS_NM" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_ACNO" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_ACNM" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_BFR_AMUT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_AFTR_AMUT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_USER_ID" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_AMUT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_CECK_AMUT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_CECK_ETC_AMUT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_RPAY_AMUT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_LATEF_AMUT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_CUST_NM" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_DATE" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_TIME" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_NO_1" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_BRC_1" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_BRC_2" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_BRC_NO" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_BRC_ID" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="K_NO" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100900" id="V_NO" type="edit" value="true" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+ </ReactionRules>
+ <!-- ******************** 서식 -> 단말 전송 ******************** -->
+ <SetValueToTerminalActions>
+  <!-- 전자문서를 호출한 단말 화면번호 -->
+  <MainTerminalScreenNo>3001</MainTerminalScreenNo>
+  <SetValueToTerminalScreen screenNo="3001">
+   <!-- M   E   T   A -->
+   <SetValueToTerminalMethod T_FieldId="meta_accNo">
+    <FieldInfo documentId="1" formId="30100900" id="DPST_ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 3001 : 입금 -->
+   <SetValueToTerminalMethod T_FieldId="3001_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100900" id="DPST_ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="3001_D1현금금액">
+    <FieldInfo documentId="1" formId="30100900" id="DPST_CASH" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="3001_D1수표금액">
+    <FieldInfo documentId="1" formId="30100900" id="DPST_CECK" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="3001_D1기타수표금액">
+    <FieldInfo documentId="1" formId="30100900" id="DPST_CECK_ETC" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="3001_D1총입금액">
+    <FieldInfo documentId="1" formId="30100900" id="DPST_AMUT" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="3001_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100900" id="DPST_N_BKB_IDNO" type="edit" value="" />
+    <JavaScript id="makeOnlyNum" />
+   </SetValueToTerminalMethod>
+  </SetValueToTerminalScreen>
+ </SetValueToTerminalActions>
+ <!-- ******************** 서식로드 이후에 해야 할 일을 정의 ******************** -->
+ <ProcessAfterFormLoadComplete />
+ <!-- ******************** 작성완료를 진행할 수 있는지 여부를 정의 ******************** -->
+</BusinessLogicXML>

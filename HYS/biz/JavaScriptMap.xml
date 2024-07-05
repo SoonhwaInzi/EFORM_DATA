@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JavaScriptMap version="0.1">
+	<JavaScript id="returnTrue"><![CDATA[function ReturnTrue(value) 
+		{ 
+			return "true";  
+		}]]></JavaScript>
+	<JavaScript id="isCheckTrue"><![CDATA[function isTrue(value)
+		{
+			var ret = "false";
+			if (value == "true")
+			ret = "true";
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="isCheckNotTrue"><![CDATA[function IsNotTrue(value)
+		{
+			var ret = "false";
+			if (value != "true")
+			ret = "true";
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="isCheckFalse"><![CDATA[function isFalse(value)
+		{
+			var ret = "false";
+			if (value == "false")
+				ret = "true";
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="isTrueWithEmpty"><![CDATA[function isTrueWithEmpty(empty, value)
+		{
+			return (value == "true") ? "true" : "false"; 
+		}]]></JavaScript>
+	<JavaScript id="isFalseWithEmpty"><![CDATA[function isFalseWithEmpty(empty, value)
+		{
+			return (value == "false") ? "true" : "false"; 
+		}]]></JavaScript>
+	<JavaScript id="isNull"><![CDATA[function IsNull(value) 
+		{ 
+			return (value == "") ? "true" : "false"; 
+		}]]></JavaScript>
+	<JavaScript id="isNotNull"><![CDATA[function IsNotNull(value) 
+        { 
+          	return (value != "") ? "true" : "false";  
+        }]]></JavaScript>
+	<JavaScript id="checkPhoneNum"><![CDATA[function checkPhoneNum(value)
+		{
+			return  value.replace(/[^0-9]/g, '').replace(/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, "$1-$2-$3");
+		}]]></JavaScript>
+	<JavaScript id="makePhoneNum"><![CDATA[function MakePhoneNum(empty, left, middle, right) 
+		{ 
+			if(left == "" && middle == "" && right == "")	return "";
+			if(middle == "" && right == "") return left;
+			return left + "-" + middle + "-" + right;  
+		}]]></JavaScript>
+	<JavaScript id="divPhoneNum"><![CDATA[function divPhoneNum(empty, value)
+		{
+			var ret = value.split('-');
+			if(ret.length < 3) return "||";
+			return ret[0]+"|"+ret[1]+"|"+ret[2];
+		}]]></JavaScript>
+	<JavaScript id="checkRegno"><![CDATA[function checkRegno(value)
+		{
+			return value.replace(/[^0-9]/g, '').replace(/([0-9]{6})([0-9]{7})/g, "$1-$2");
+		}]]></JavaScript>
+	<JavaScript id="checkAcno"><![CDATA[function checkAcno(value)
+		{
+			var v = value.replace(/[^0-9]/g, '');
+			if(v.length > 11)	
+				return v.replace(/([0-9]{3})([0-9]{2})([0-9]{6})([0-9]{3})/g, "$1-$2-$3-$4");
+			else
+				return v.replace(/([0-9]{3})([0-9]{2})([0-9]{6})/g, "$1-$2-$3");
+		}]]></JavaScript>
+	<JavaScript id="checkDate"><![CDATA[function checkDate(value)
+		{
+			return  value.replace(/[^0-9]/g, '').replace(/([0-9]{4})([0-9]{2})([0-9]{2})/g, "$1/$2/$3");
+		}]]></JavaScript>
+	<JavaScript id="checkTime"><![CDATA[function checkTime(value)
+		{
+			return  value.replace(/[^0-9]/g, '').substr(0,6).replace(/([0-9]{2})([0-9]{2})([0-9]{2})/g, "$1:$2:$3");
+		}]]></JavaScript>
+	<JavaScript id="checkMoney"><![CDATA[function checkMoney(value)
+		{
+			return  "\\" + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}]]></JavaScript>
+	<JavaScript id="checkQtt"><![CDATA[function checkQtt(value)
+		{
+			return  value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}]]></JavaScript>
+	<JavaScript id="makeOnlyNum"><![CDATA[function makeOnlyNum(value)
+		{
+			return value.replace(/[^0-9]/g, '');
+		}]]></JavaScript>
+	<JavaScript id="makeOnlyText"><![CDATA[function makeOnlyText(value)
+		{
+			return value.replace(/ /g, '');
+		}]]></JavaScript>
+	<JavaScript id="numToAgreeCheck"><![CDATA[function NumToAgreeCheck(value) 
+		{ 
+			var ret = "false|false";
+			
+			if(value == "0")		{	ret = "true|false";	}
+			else if(value == "1")	{	ret = "false|true";	}
+			else if(value == "9")	{	ret = "false|false";	}
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="numToYesNoCheck"><![CDATA[function NumToYesNoCheck(value) 
+		{ 
+			var ret = "false|false";
+			
+			if (value == "1")		ret = "true|false";
+			else if (value == "0")	ret = "false|true";	
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="numToTwoCheck"><![CDATA[function NumToTwoCheck(value) 
+		{ 
+			var ret = "false|false";
+			
+			if (value == "1"  || value == "01")			ret = "true|false";
+			else if (value == "2"  || value == "02")	ret = "false|true";	
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="numToThreeCheck"><![CDATA[function NumToThreeCheck(value) 
+		{ 
+			var ret = "false|false|false";
+			
+			if (value == "1" || value == "01")		ret = "true|false|false";
+			else if (value == "2" || value == "02")	ret = "false|true|false";
+	        else if (value == "3" || value == "03")	ret = "false|false|true";	
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="numToFourCheck"><![CDATA[function NumToFourCheck(value) 
+		{ 
+			var ret = "false|false|false|false";
+			
+			if (value == "1" || value == "01")		ret = "true|false|false|false";
+			else if (value == "2" || value == "02")	ret = "false|true|false|false";
+	        else if (value == "3" || value == "03")	ret = "false|false|true|false";	
+	        else if (value == "4" || value == "04")	ret = "false|false|false|true";	
+	
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="numToFiveCheck"><![CDATA[function NumToFourCheck(value) 
+		{ 
+			var ret = "false|false|false|false|false";
+			
+			if (value == "1" || value == "01")		ret = "true|false|false|false|false";
+			else if (value == "2" || value == "02")	ret = "false|true|false|false|false";
+	        else if (value == "3" || value == "03")	ret = "false|false|true|false|false";	
+	        else if (value == "4" || value == "04")	ret = "false|false|false|true|false";	
+	        else if (value == "5" || value == "05")	ret = "false|false|false|false|true";	
+
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="numToSixCheck"><![CDATA[function NumToFourCheck(value) 
+		{ 
+			var ret = "false|false|false|false|false";
+			
+			if (value == "1" || value == "01")		ret = "true|false|false|false|false|false";
+			else if (value == "2" || value == "02")	ret = "false|true|false|false|false|false";
+	        else if (value == "3" || value == "03")	ret = "false|false|true|false|false|false";	
+	        else if (value == "4" || value == "04")	ret = "false|false|false|true|false|false";	
+	        else if (value == "5" || value == "05")	ret = "false|false|false|false|true|false";	
+	        else if (value == "6" || value == "06")	ret = "false|false|false|false|false|true";	
+
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="trueCheckToNumm"><![CDATA[function trueCheckToNumm(check)
+		{
+			var ret = "";
+
+			if(check == "true") ret = "1";
+
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="agreeCheckToNumm"><![CDATA[function agreeCheckToNumm(check1, check2)
+		{
+			var ret = "";
+
+			if(check1 == "true")		ret = "0";
+			else if(check2 == "true")	ret = "1";
+			else						ret = "9";
+
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="yesNoCheckToNumm"><![CDATA[function yesNoCheckToNumm(check1, check2) 
+		{ 
+			var ret = "";
+			
+			if	(check1 == "true")      ret = "1";
+			else if	(check2 == "true")  ret = "0";
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="twoCheckToNumm"><![CDATA[function TwoCheckToNumm(check1, check2) 
+		{ 
+			var ret = "";
+			
+			if	(check1 == "true")      ret = "1";
+			else if	(check2 == "true")  ret = "2";
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="threeCheckToNumm"><![CDATA[function ThreeCheckToNumm(check1, check2, check3) 
+		{ 
+			var ret = "";
+			
+			if	(check1 == "true")      ret = "1";
+			else if	(check2 == "true")  ret = "2";
+			else if	(check3 == "true")  ret = "3";
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="fourCheckToNumm"><![CDATA[function FourCheckToNumm(check1, check2, check3, check4) 
+		{ 
+			var ret = "";
+			
+			if	(check1 == "true")      ret = "1";
+			else if	(check2 == "true")  ret = "2";
+			else if	(check3 == "true")  ret = "3";
+			else if	(check4 == "true")  ret = "4";
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="fiveCheckToNumm"><![CDATA[function FiveCheckToNumm(check1, check2, check3, check4, check5) 
+		{ 
+			var ret = "";
+
+			if	(check1 == "true")      ret = "1";
+			else if	(check2 == "true")  ret = "2";
+			else if	(check3 == "true")  ret = "3";
+			else if	(check4 == "true")  ret = "4";
+			else if	(check5 == "true")  ret = "5";
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="sixCheckToNumm"><![CDATA[function sixCheckToNumm(check1, check2, check3, check4, check5, check6) 
+		{ 
+			var ret = "";
+
+			if	(check1 == "true")      ret = "1";
+			else if	(check2 == "true")  ret = "2";
+			else if	(check3 == "true")  ret = "3";
+			else if	(check4 == "true")  ret = "4";
+			else if	(check5 == "true")  ret = "5";
+			else if	(check6 == "true")  ret = "6";
+			
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="stdCheck"><![CDATA[function stdCheck(std, value)
+		{
+			var ret = value;
+			if(std == "" || std == "false")	ret = "";
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="stdTwoCheck"><![CDATA[function stdTwoCheck(std1, std2, value)
+		{
+			if(!(std1 == "" || std1 == "false"))	return value;
+			if(!(std2 == "" || std2 == "false"))	return value;
+			return "";
+		}]]></JavaScript>
+	<JavaScript id="stdThreeCheck"><![CDATA[function stdThreeCheck(std1, std2, std3, value)
+		{
+			if(!(std1 == "" || std1 == "false"))	return value;
+			if(!(std2 == "" || std2 == "false"))	return value;
+			if(!(std3 == "" || std3 == "false"))	return value;
+			return "";
+		}]]></JavaScript>
+	<JavaScript id="stdFourCheck"><![CDATA[function stdFourCheck(std1, std2, std3, std4, value)
+		{
+			if(!(std1 == "" || std1 == "false"))	return value;
+			if(!(std2 == "" || std2 == "false"))	return value;
+			if(!(std3 == "" || std3 == "false"))	return value;
+			if(!(std4 == "" || std4 == "false"))	return value;
+			return "";
+		}]]></JavaScript>
+	<JavaScript id="stdFiveCheck"><![CDATA[function stdFiveCheck(std1, std2, std3, std4, std5, value)
+		{
+			if(!(std1 == "" || std1 == "false"))	return value;
+			if(!(std2 == "" || std2 == "false"))	return value;
+			if(!(std3 == "" || std3 == "false"))	return value;
+			if(!(std4 == "" || std4 == "false"))	return value;
+			if(!(std5 == "" || std5 == "false"))	return value;
+			return "";
+		}]]></JavaScript>
+	<JavaScript id="codeToCountry"><![CDATA[function codeToCountry(value) 
+		{
+			var ret = "";
+			
+			if (value == "000")   	   ret = "대한민국";
+			else if (value == "001")   ret = "미국";
+			else if (value == "002")   ret = "영국";
+			else if (value == "003")   ret = "일본";
+			else if (value == "004")   ret = "독일";
+			else if (value == "005")   ret = "프랑스";
+			else if (value == "006")   ret = "중화인민공화국";
+			else if (value == "007")   ret = "중화민국";
+			else if (value == "008")   ret = "캐나다";
+			else if (value == "009")   ret = "홍콩";
+			else if (value == "010")   ret = "스위스";
+			else if (value == "011")   ret = "오스트리아";
+			else if (value == "012")   ret = "필리핀";
+			else if (value == "013")   ret = "네덜란드";
+			else if (value == "014")   ret = "덴마크";
+			else if (value == "015")   ret = "뉴질랜드";
+			else if (value == "016")   ret = "인도";
+			else if (value == "017")   ret = "오스트레일리아";
+			else if (value == "018")   ret = "말레이시아";
+			else if (value == "019")   ret = "아르헨티나";
+			else if (value == "020")   ret = "스웨덴";
+			else if (value == "021")   ret = "싱가포르";
+			else if (value == "022")   ret = "룩셈부르크";
+			else if (value == "023")   ret = "아일랜드";
+			else if (value == "024")   ret = "방글라데시";
+			else if (value == "025")   ret = "파키스탄";
+			else if (value == "026")   ret = "인도네시아";
+			else if (value == "027")   ret = "타이";
+			else if (value == "028")   ret = "튀니지";
+			else if (value == "029")   ret = "벨기에";
+			else if (value == "030")   ret = "노르웨이";
+			else if (value == "031")   ret = "튀르키예";
+			else if (value == "032")   ret = "쿠웨이트";
+			else if (value == "033")   ret = "기타";
+			else if (value == "034")   ret = "브라질";
+			else if (value == "035")   ret = "체코";
+			else if (value == "036")   ret = "폴란드";
+			else if (value == "037")   ret = "칠레";
+			else if (value == "038")   ret = "핀란드";
+			else if (value == "039")   ret = "헝가리";
+			else if (value == "040")   ret = "그리스";
+			else if (value == "041")   ret = "포르투갈";
+			else if (value == "042")   ret = "남아프리카 공화국";
+			else if (value == "043")   ret = "이탈리아";
+			else if (value == "044")   ret = "스페인";
+			else if (value == "045")   ret = "멕시코";
+			else if (value == "046")   ret = "스리랑카";
+			else if (value == "047")   ret = "리히텐슈타인";
+			else if (value == "048")   ret = "파나마";
+			else if (value == "049")   ret = "버뮤다";
+			else if (value == "050")   ret = "바하마";
+			else if (value == "051")   ret = "페루";
+			else if (value == "052")   ret = "파라과이";
+			else if (value == "053")   ret = "이스라엘";
+			else if (value == "054")   ret = "네팔";
+			else if (value == "055")   ret = "아랍에미리트";
+			else if (value == "056")   ret = "코트디부아르";
+			else if (value == "057")   ret = "사우디아라비아";
+			else if (value == "058")   ret = "푸에르토리코";
+			else if (value == "059")   ret = "바레인";
+			else if (value == "060")   ret = "건지";
+			else if (value == "061")   ret = "채널아일랜드";
+			else if (value == "062")   ret = "미국령 버진아일랜드";
+			else if (value == "063")   ret = "요르단";
+			else if (value == "064")   ret = "알제리";
+			else if (value == "065")   ret = "나이지리아";
+			else if (value == "066")   ret = "러시아";
+			else if (value == "067")   ret = "저지";
+			else if (value == "068")   ret = "브루나이";
+			else if (value == "069")   ret = "베트남";
+			else if (value == "070")   ret = "라이베리아";
+			else if (value == "071")   ret = "국제기구";
+			else if (value == "072")   ret = "케이맨 제도";
+			else if (value == "073")   ret = "불가리아";
+			else if (value == "074")   ret = "루마니아";
+			else if (value == "075")   ret = "피지";
+			else if (value == "076")   ret = "이집트";
+			else if (value == "077")   ret = "몽골";
+			else if (value == "078")   ret = "영국령 버진아일랜드";
+			else if (value == "079")   ret = "네덜란드령 안틸레스";
+			else if (value == "080")   ret = "맨섬";
+			else if (value == "081")   ret = "쿡 제도";
+			else if (value == "082")   ret = "키프로스";
+			else if (value == "083")   ret = "지브롤터";
+			else if (value == "084")   ret = "몰타";
+			else if (value == "085")   ret = "모리셔스";
+			else if (value == "086")   ret = "세인트빈센트 그레나딘";
+			else if (value == "087")   ret = "슬로베니아";
+			else if (value == "088")   ret = "우즈베키스탄";
+			else if (value == "089")   ret = "모나코";
+			else if (value == "090")   ret = "마셜 제도";
+			else if (value == "091")   ret = "말레이시아 라부안";
+			else if (value == "099")   ret = "대한민국국민인해외영주권자";
+			else if (value == "101")   ret = "아프가니스탄";
+			else if (value == "102")   ret = "알바니아";
+			else if (value == "103")   ret = "남극";
+			else if (value == "104")   ret = "미얀마";
+			else if (value == "105")   ret = "아메리칸사모아";
+			else if (value == "106")   ret = "안도라";
+			else if (value == "107")   ret = "앙골라";
+			else if (value == "108")   ret = "부룬디";
+			else if (value == "109")   ret = "앤티가 바부다";
+			else if (value == "110")   ret = "아제르바이잔";
+			else if (value == "111")   ret = "아르메니아";
+			else if (value == "112")   ret = "벨라루스";
+			else if (value == "113")   ret = "바베이도스";
+			else if (value == "114")   ret = "부탄";
+			else if (value == "115")   ret = "볼리비아";
+			else if (value == "116")   ret = "캄보디아";
+			else if (value == "117")   ret = "보스니아 헤르체고비나";
+			else if (value == "118")   ret = "보츠와나";
+			else if (value == "119")   ret = "부베 섬";
+			else if (value == "120")   ret = "카메룬";
+			else if (value == "121")   ret = "벨리즈";
+			else if (value == "122")   ret = "영국령 인도양 지역";
+			else if (value == "123")   ret = "솔로몬 제도";
+			else if (value == "132")   ret = "카보베르데";
+			else if (value == "140")   ret = "중앙아프리카 공화국";
+			else if (value == "148")   ret = "차드";
+			else if (value == "162")   ret = "크리스마스 섬";
+			else if (value == "166")   ret = "코코스 제도";
+			else if (value == "170")   ret = "콜롬비아";
+			else if (value == "174")   ret = "코모로";
+			else if (value == "175")   ret = "마요트";
+			else if (value == "178")   ret = "콩고 공화국";
+			else if (value == "180")   ret = "콩고 민주 공화국";
+			else if (value == "188")   ret = "코스타리카";
+			else if (value == "191")   ret = "크로아티아";
+			else if (value == "192")   ret = "쿠바";
+			else if (value == "200")   ret = "유럽연합";
+			else if (value == "204")   ret = "베냉";
+			else if (value == "212")   ret = "도미니카";
+			else if (value == "214")   ret = "도미니카 공화국";
+			else if (value == "218")   ret = "에콰도르";
+			else if (value == "222")   ret = "엘살바도르";
+			else if (value == "226")   ret = "적도 기니";
+			else if (value == "231")   ret = "에티오피아";
+			else if (value == "232")   ret = "에리트레아";
+			else if (value == "233")   ret = "에스토니아";
+			else if (value == "234")   ret = "페로 제도";
+			else if (value == "238")   ret = "포클랜드 제도";
+			else if (value == "239")   ret = "사우스조지아 사우스샌드위치 제도";
+			else if (value == "248")   ret = "올란드 제도";
+			else if (value == "254")   ret = "프랑스령 기아나";
+			else if (value == "258")   ret = "프랑스령 폴리네시아";
+			else if (value == "260")   ret = "프랑스령 남부 지역";
+			else if (value == "262")   ret = "지부티";
+			else if (value == "266")   ret = "가봉";
+			else if (value == "268")   ret = "그루지야";
+			else if (value == "270")   ret = "감비아";
+			else if (value == "275")   ret = "팔레스타인";
+			else if (value == "288")   ret = "가나";
+			else if (value == "296")   ret = "키리바시";
+			else if (value == "304")   ret = "그린란드";
+			else if (value == "308")   ret = "그레나다";
+			else if (value == "312")   ret = "과들루프";
+			else if (value == "316")   ret = "괌";
+			else if (value == "320")   ret = "과테말라";
+			else if (value == "324")   ret = "기니";
+			else if (value == "328")   ret = "가이아나";
+			else if (value == "332")   ret = "아이티";
+			else if (value == "334")   ret = "허드 맥도널드 제도";
+			else if (value == "336")   ret = "바티칸 시국";
+			else if (value == "340")   ret = "온두라스";
+			else if (value == "352")   ret = "아이슬란드";
+			else if (value == "364")   ret = "이란";
+			else if (value == "368")   ret = "이라크";
+			else if (value == "388")   ret = "자메이카";
+			else if (value == "398")   ret = "카자흐스탄";
+			else if (value == "404")   ret = "케냐";
+			else if (value == "408")   ret = "조선민주주의인민공화국";
+			else if (value == "417")   ret = "키르기스스탄";
+			else if (value == "418")   ret = "라오스";
+			else if (value == "422")   ret = "레바논";
+			else if (value == "426")   ret = "레소토";
+			else if (value == "428")   ret = "라트비아";
+			else if (value == "434")   ret = "리비아";
+			else if (value == "440")   ret = "리투아니아";
+			else if (value == "446")   ret = "마카오";
+			else if (value == "450")   ret = "마다가스카르";
+			else if (value == "454")   ret = "말라위";
+			else if (value == "462")   ret = "몰디브";
+			else if (value == "466")   ret = "말리";
+			else if (value == "474")   ret = "마르티니크";
+			else if (value == "478")   ret = "모리타니";
+			else if (value == "498")   ret = "몰도바";
+			else if (value == "499")   ret = "몬테네그로";
+			else if (value == "500")   ret = "몬트세랫";
+			else if (value == "504")   ret = "모로코";
+			else if (value == "508")   ret = "모잠비크";
+			else if (value == "512")   ret = "오만";
+			else if (value == "516")   ret = "나미비아";
+			else if (value == "520")   ret = "나우루";
+			else if (value == "531")   ret = "퀴라소";
+			else if (value == "533")   ret = "아루바";
+			else if (value == "534")   ret = "신트마르턴";
+			else if (value == "540")   ret = "누벨칼레도니";
+			else if (value == "548")   ret = "바누아투";
+			else if (value == "558")   ret = "니카라과";
+			else if (value == "562")   ret = "니제르";
+			else if (value == "570")   ret = "니우에";
+			else if (value == "574")   ret = "노퍽 섬";
+			else if (value == "580")   ret = "북마리아나 제도";
+			else if (value == "581")   ret = "미국령 군소 제도";
+			else if (value == "583")   ret = "미크로네시아 연방";
+			else if (value == "585")   ret = "팔라우";
+			else if (value == "598")   ret = "파푸아 뉴기니";
+			else if (value == "612")   ret = "핏케언 섬";
+			else if (value == "624")   ret = "기니비사우";
+			else if (value == "626")   ret = "동티모르";
+			else if (value == "634")   ret = "카타르";
+			else if (value == "638")   ret = "레위니옹";
+			else if (value == "646")   ret = "르완다";
+			else if (value == "654")   ret = "세인트헬레나";
+			else if (value == "659")   ret = "세인트키츠 네비스";
+			else if (value == "660")   ret = "앵귈라";
+			else if (value == "662")   ret = "세인트루시아";
+			else if (value == "666")   ret = "생피에르 미클롱";
+			else if (value == "674")   ret = "산마리노";
+			else if (value == "678")   ret = "상투메 프린시페";
+			else if (value == "686")   ret = "세네갈";
+			else if (value == "688")   ret = "세르비아";
+			else if (value == "690")   ret = "세이셸";
+			else if (value == "694")   ret = "시에라리온";
+			else if (value == "703")   ret = "슬로바키아";
+			else if (value == "706")   ret = "소말리아";
+			else if (value == "716")   ret = "짐바브웨";
+			else if (value == "728")   ret = "남수단";
+			else if (value == "732")   ret = "서사하라";
+			else if (value == "736")   ret = "수단";
+			else if (value == "740")   ret = "수리남";
+			else if (value == "744")   ret = "스발바르 얀마옌";
+			else if (value == "748")   ret = "스와질란드";
+			else if (value == "760")   ret = "시리아";
+			else if (value == "762")   ret = "타지키스탄";
+			else if (value == "768")   ret = "토고";
+			else if (value == "772")   ret = "토켈라우 제도";
+			else if (value == "776")   ret = "통가";
+			else if (value == "780")   ret = "트리니다드 토바고";
+			else if (value == "795")   ret = "투르크메니스탄";
+			else if (value == "796")   ret = "터크스 케이커스 제도";
+			else if (value == "798")   ret = "투발루";
+			else if (value == "800")   ret = "우간다";
+			else if (value == "804")   ret = "우크라이나";
+			else if (value == "807")   ret = "마케도니아 공화국";
+			else if (value == "834")   ret = "탄자니아";
+			else if (value == "854")   ret = "부르키나파소";
+			else if (value == "858")   ret = "우루과이";
+			else if (value == "862")   ret = "베네수엘라";
+			else if (value == "876")   ret = "월리스 푸투나";
+			else if (value == "882")   ret = "사모아";
+			else if (value == "887")   ret = "예멘";
+			else if (value == "891")   ret = "세르비아 몬테네그로";
+			else if (value == "894")   ret = "잠비아";
+
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="codeToJobCheck"><![CDATA[function codeToJobCheck(value) 
+		{
+			var ret = "false|false|false|false|false|false|false|false|false|false|false|false|false|false|false|false";
+			
+			if (value == "10")  	ret = "true|false|false|false|false|false|false|false|false|false|false|false|false|false|false|false";
+			else if (value == "20") ret = "false|true|false|false|false|false|false|false|false|false|false|false|false|false|false|false";
+			else if (value == "30") ret = "false|false|true|false|false|false|false|false|false|false|false|false|false|false|false|false";
+			else if (value == "40")	ret = "false|false|false|true|false|false|false|false|false|false|false|false|false|false|false|false";
+			else if (value == "47")	ret = "false|false|false|false|true|false|false|false|false|false|false|false|false|false|false|false";
+			else if (value == "50")	ret = "false|false|false|false|false|true|false|false|false|false|false|false|false|false|false|false";
+			else if (value == "61")	ret = "false|false|false|false|false|false|true|false|false|false|false|false|false|false|false|false";
+			else if (value == "62") ret = "false|false|false|false|false|false|false|true|false|false|false|false|false|false|false|false";
+			else if (value == "63")	ret = "false|false|false|false|false|false|false|false|true|false|false|false|false|false|false|false";
+			else if (value == "71") ret = "false|false|false|false|false|false|false|false|false|true|false|false|false|false|false|false";
+			else if (value == "72")	ret = "false|false|false|false|false|false|false|false|false|false|true|false|false|false|false|false";
+			else if (value == "73")	ret = "false|false|false|false|false|false|false|false|false|false|false|true|false|false|false|false";
+			else if (value == "74") ret = "false|false|false|false|false|false|false|false|false|false|false|false|true|false|false|false";
+			else if (value == "75") ret = "false|false|false|false|false|false|false|false|false|false|false|false|false|true|false|false";
+			else if (value == "77")	ret = "false|false|false|false|false|false|false|false|false|false|false|false|false|false|true|false";
+			else if (value == "99")	ret = "false|false|false|false|false|false|false|false|false|false|false|false|false|false|false|true";
+	
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="codeToVender"><![CDATA[function codeToVender(value) 
+		{
+			var ret = "";
+			
+			if (value == "004")   	   ret = "004 바스코";
+			else if (value == "001")   ret = "001 한국정보인증(주)(구 미래테크놀로지)";
+			else if (value == "002")   ret = "002 코마스(RSA)";
+			else if (value == "003")   ret = "003 인터넷시큐리티";
+			else if (value == "005")   ret = "005 인카드";
+			else if (value == "006")   ret = "006 시큐어컴퓨팅";
+			else if (value == "007")   ret = "007 액티브아이덴티티";
+			else if (value == "008")   ret = "008 아이덴티타";
+			else if (value == "009")   ret = "009 토판폼즈";
+			else if (value == "010")   ret = "010 스마트크리에이티브";
+			else if (value == "011")   ret = "011 (주)스마트이노베이션";
+			else if (value == "012")   ret = "012 (주)아톤";
+			else if (value == "016")   ret = "016 코나아이";
+			else if (value == "018")   ret = "018 이트리즈시스템";
+			else if (value == "019")   ret = "019 엠파이브(카드형 OTP)";
+			else if (value == "301")   ret = "301 한국정보인증(주)(스마트OTP)";
+			else if (value == "304")   ret = "304 오티피멀티솔루션(스마트OTP)";
+			else if (value == "310")   ret = "310 스마트크리에이티브(스마트OTP)";
+			else if (value == "312")   ret = "312 아톤(스마트OTP)";
+			else if (value == "401")   ret = "401 미래테크놀로지(TZ OTP)";
+			else if (value == "412")   ret = "412 (주)에이티솔루션즈(하나은행)";
+
+			return ret;
+		}]]></JavaScript>
+	<JavaScript id="numToKor"><![CDATA[function numToKor(value)
+		{
+			value = value.replace(/[^0-9]/g, '');
+
+			var numKor = '영일이삼사오육칠팔구';
+			var numUnit1 = ' 십백천';
+			var numUnit2 = ' 만억조';
+
+			var num = ret = total = "";
+
+			var j = 0;
+			while (value > 0) {
+				num = Number(value) % 10000;
+				value = parseInt(Number(value) / 10000);
+
+				for (var i = 0; i < 4; i++) {
+					if(num % 10 != 0)
+						ret = numKor.charAt(num % 10) + numUnit1.charAt(i) + ret;
+					num = parseInt(num / 10);
+				}
+				total = ret + numUnit2.charAt(j++) + total;
+				ret = "";
+			}
+			return total.replace(/ /g,"");
+		}]]></JavaScript>
+	<JavaScript id="korToNum"><![CDATA[function korToNum(value)
+		{
+			var numKor = '영일이삼사오육칠팔구';
+			var numUnit1 = { '십': 10, '백': 100, '천': 1000 };
+			var numUnit2 = { '만': 10000, '억': 100000000, '조': 1000000000000 };
+
+			var num = ret = total = 0;
+
+			for (var i = 0; i < value.length; i++) {
+				var n = value.charAt(i);
+
+				if (numKor.indexOf(n) != -1) {
+					num = numKor.indexOf(n);
+				}
+				else if (n in numUnit1) {
+					ret += num * numUnit1[n];
+					num = 0;
+				}
+				else if (n in numUnit2) {
+					total = (ret + num) * numUnit2[n];
+					ret = 0;
+				}
+				else return "";
+			}
+			total += ret + num;
+			return total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}]]></JavaScript>
+</JavaScriptMap>

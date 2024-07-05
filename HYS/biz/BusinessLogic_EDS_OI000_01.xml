@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessLogicXML id="EDS_OI000_01" version="0.6" title="계좌_공통_약관및설명서">
+ <!-- **************************************** 비즈로직 관련 MEMO ****************************************
+			[ 서식 ]
+        1. 종합(91)
+          30100054 : 종합계좌약관
+          30100050 : 홈트레이딩 서비스 이용약관
+          30100052 : 전자금융거래 이용에 관한 약관
+          30100047 : 매매거래계좌설정약관
+          30100043 : 은행이체 서비스약관
+        
+        2. 위탁(01)
+          30100045 : 청약거래약관
+          30100019 : 일중매매거래(트레이딩)위험고지
+          30100049 : 사이버 거래 시 유의사항
+          30100018 : 증권매매 시 투자자유의사항
+
+        3. 선물옵션(51)
+          30100048 : 장내파생상품 거래설명서 
+          30100046 : 파생상품계좌설정약관
+          30100040 : 파생상품시장 착오 구제제도 관련 설명서
+
+        4. 수익증권(46), 신연금저축(47)
+          30100042 : 수익증권저축약관
+
+        5. 환매체RP(77) 
+          30100023 : 환매조건부채권(RP) 거래 사전 동의서
+  ****************************************************************************************************** -->
+ <OpenForms />
+ <EssentialFields>
+  <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100040" id="P_CUST_SIGN" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100023" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100023" id="P_CUST_SIGN" type="pen" value="" />
+ </EssentialFields>
+ <!-- 서식에 표시 -->
+ <FieldOrders />
+ <PlaceHolderFields />
+ <HiddenFields />
+ <SetValueToDocumentMethods>
+  <!-- 고객,대리인,판매자  -->
+  <SetValueToDocumentMethod T_FieldId="cus_nm" method="SetPlaceHolder">
+   <FieldInfo documentId="1" formId="30100040" id="P_CUST_NM" type="pen" value="" />
+   <FieldInfo documentId="1" formId="30100023" id="P_CUST_NM" type="pen" value="" />
+  </SetValueToDocumentMethod>
+ </SetValueToDocumentMethods>
+ <!-- 서식 필드에 값이 입력되면 입력된 값에 따라 해야 할 일들을 정의 -->
+ <ReactionRules>
+  <!-- 계좌번호 -->
+  <SetValueCompleteField documentId="1" formId="30100040" fieldId="ACNO">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100040" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkAcno" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+ </ReactionRules>
+ <!-- 서식로드 이후에 해야 할 일을 정의 -->
+ <ProcessAfterFormLoadComplete />
+ <!-- 작성완료를 진행할 수 있는지 여부를 정의 -->
+</BusinessLogicXML>

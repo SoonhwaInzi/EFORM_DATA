@@ -1,0 +1,2481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessLogicXML id="EDS_CR001_01" version="6.3" title="신용공여">
+ <OpenForms>
+  <FormInfo documentId="1" formId="30100028" replace="false" />
+  <FormInfo documentId="1" formId="30100031" replace="false" />
+  <FormInfo documentId="1" formId="30100032" replace="false" />
+  <FormInfo documentId="1" formId="30100030" replace="false" />
+  <FormInfo documentId="1" formId="30100053" replace="false" />
+  <FormInfo documentId="1" formId="30100029" replace="false" />
+  <FormInfo documentId="1" formId="30100022" replace="false" />
+  <FormInfo documentId="1" formId="30100002" replace="false" />
+  <FormInfo documentId="1" formId="30100003" replace="false" />
+ </OpenForms>
+ <EssentialFields>
+  <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="MPNO" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="ADDR_1" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="APLY_1" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="CHG_1" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="CNCLTN_1" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100028" id="P_CUST_SIGN" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="CHG" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="SAME" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INDV" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="CORP" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_INFO_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_INFO_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_ADV_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_ADV_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_PER_6" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_PER_12" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_PER_24" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_PER_36" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_PER_36_OVER" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_5_CLAS" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_4_CLAS" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_3_CLAS" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_2_CLAS" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_1_CLAS" type="check" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_0" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_12" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_36" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_60" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_60_OVER" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_DEBT" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_LIV" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_AQD_HOME" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_ECSS_CASH" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_INCR_PRPT" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="BSIC_0_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="BSIC_1_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="BSIC_2_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="BSIC_3_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="RISK_1_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="RISK_2_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="RISK_3_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_3_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_2_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_1_CLAS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_10" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_20" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_30" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_50" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_100" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="LOSS_10" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="LOSS_20" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="LOSS_30" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="LOSS_50" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="LOSS_100" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="DRVT_INVS_PER_DT2Y" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="DRVT_INVS_PER_DTMM" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="INVS_EXPRDT_Y" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100031" id="P_CUST_SIGN" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="RPAY_SALE" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="RPAY_SLRY" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="RPAY_RENT" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="RPAY_PENS" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="RPAY_BIZINCOM" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="RPAY_ETC" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100030" id="P_CUST_SIGN" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100029" id="BRC" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100029" id="TTL" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100029" id="PERS" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100029" id="CUST_NM" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100029" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100029" id="P_CUST_SIGN" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100022" id="ACNO" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100022" id="CUST_NM" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100022" id="MNGR" type="edit" value="" />
+  <FieldInfo documentId="1" formId="30100022" id="P_MNGR_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100022" id="P_MNGR_SIGN" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_UID_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_UID_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_SST_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_SST_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_ID_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_ID_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_UID_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_UID_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_ID_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_ID_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_UID_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_UID_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_ID_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_ID_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100002" id="P_CUST_SIGN" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_N" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_Y" type="radio" value="" />
+  <FieldInfo documentId="1" formId="30100003" id="P_CUST_NM" type="pen" value="" />
+  <FieldInfo documentId="1" formId="30100003" id="P_CUST_SIGN" type="pen" value="" />
+ </EssentialFields>
+ <PlaceHolderFields>
+  <FieldInfo documentId="1" formId="30100031" id="P_INVS_ADV_N" type="pen" value="희망하지않음" />
+  <FieldInfo documentId="1" formId="30100031" id="P_INVS_INFO_N" type="pen" value="제공하지않음" />
+  <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_1" type="pen" value="3회" />
+  <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_2" type="pen" value="통보된 것으로 간주" />
+  <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_4" type="pen" value="증액 또는 축소" />
+  <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_5" type="pen" value="익영업일" />
+ </PlaceHolderFields>
+ <!-- ******************** 단말 -> 서식 전송 ******************** -->
+ <SetValueToDocumentMethods>
+  <!-- 직원정보 -->
+  <SetValueToDocumentMethod T_FieldId="emp_nm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="emp_nm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_brnm" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="emp_brnm" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_no" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="emp_no" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="emp_position" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="emp_position" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <!-- 2408 : 계좌신용/대출약정 - [기준] -->
+  <SetValueToDocumentMethod T_FieldId="2408_D1실명확인번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="cus_reg_no" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2408_D1계좌번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2408_D1계좌명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="cus_nm" type="edit" value="" />
+   <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2408_T1이동전화번호1" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="MPNO" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2408_D5우편번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="ADDR_3" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2408_D5주소" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="ADDR_1" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2408_D1서비스유형코드" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="CRDT" type="check" value="" />
+   <FieldInfo documentId="1" formId="30100028" id="STOCK_MOGG" type="check" value="" />
+   <FieldInfo documentId="1" formId="30100028" id="SALE_STOCK_MOGG" type="check" value="" />
+   <FieldInfo documentId="1" formId="30100028" id="SBSR_LOAN" type="check" value="" />
+   <JavaScript><![CDATA[function setValue(value) 
+        {
+          if(value == "01") return "true|false|false|false";
+          if(value == "07") return "false|true|false|false";
+          if(value == "02") return "false|false|true|false";
+          if(value == "05") return "false|false|false|true";
+
+          return "false|false|false|false";
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2408_D1처리구분" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="APLY" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100028" id="CHG" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100028" id="CNCLTN" type="radio" value="" />
+   <JavaScript><![CDATA[function setValue(value) 
+        {
+          if(value == "1") return "true|false|false";
+          if(value == "5") return "false|true|false";
+          if(value == "2") return "false|false|true";
+
+          return "false|false|false";
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <!-- 2290 : 개인(신용)정보 수집,이용,제공 동의 -->
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부3" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_UID_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_UID_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부15" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_SST_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_SST_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부1" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_ID_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_ID_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부39" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_UID_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_UID_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부13" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_ID_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_ID_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부38" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_UID_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_UID_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부11" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_ID_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_ID_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1개인정보제공동의여부5" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_N" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_Y" type="radio" value="" />
+   <JavaScript id="numToAgreeCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2290_D1항목값3" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_ALL" type="check" value="" />
+   <FieldInfo documentId="1" formId="30100003" id="CST_SELE_SMS" type="check" value="" />
+   <FieldInfo documentId="1" formId="30100003" id="CST_SELE_EMADR" type="check" value="" />
+   <FieldInfo documentId="1" formId="30100003" id="CST_SELE_MPNO" type="check" value="" />
+   <FieldInfo documentId="1" formId="30100003" id="CST_SELE_DM" type="check" value="" />
+   <JavaScript><![CDATA[function setValue(value)
+        {
+          if(value == "00") return "true|true|true|true|true";
+          
+          var ret = "false|";
+          ret += (value.search('20')!=-1) ? "true|" : "false|";
+          ret += (value.search('30')!=-1) ? "true|" : "false|";
+          ret += (value.search('10')!=-1) ? "true|" : "false|";
+          ret += (value.search('40')!=-1) ? "true" : "false";
+          return ret;
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <!-- 2145 : 투자정보확인서 등록/변경 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1처리구분" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="SAME" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100031" id="CHG" type="radio" value="" />
+   <JavaScript><![CDATA[function setValue(value)
+        {
+          if(value == "3")  return "true|false";
+          if(value == "1" || value == "2")  return "false|true";
+          return "false|false";
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145_D1정보확인사원번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="emp_no" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145_D1산출등급명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="cus_invest_type" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <!-- 개인/법인 구분: 1.개인, 2.법인 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1개인여부" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="INDV" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100031" id="CORP" type="radio" value="" />
+   <JavaScript id="numToTwoCheck" />
+  </SetValueToDocumentMethod>
+  <!-- 정보 제공 : 1.제공, 0.미제공 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1정보제공구분" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="INVS_INFO_Y" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_INFO_N" type="radio" value="" />
+   <JavaScript id="numToYesNoCheck" />
+  </SetValueToDocumentMethod>
+  <!-- 투자자 권유 : 1.희망, 0.불원 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1투자권유구분" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="INVS_ADV_Y" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_ADV_N" type="radio" value="" />
+   <JavaScript id="numToYesNoCheck" />
+  </SetValueToDocumentMethod>
+  <!-- 파생상품 투자경험 기간 : 개월 -> 년/개월 로 표시 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1파생상품투자기간" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="DRVT_INVS_PER_DT2Y" type="edit" value="" />
+   <FieldInfo documentId="1" formId="30100031" id="DRVT_INVS_PER_DTMM" type="edit" value="" />
+   <JavaScript><![CDATA[function setValue(value)
+        {
+          var ret = "";
+          var year = parseInt(Number(value)/12);
+          var month = Number(value)%12;
+          ret = year.toString() + "|" + month.toString();
+
+          return ret;
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <!-- Q1 : 연령 / 총자본금 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문1" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="AGE_19" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="AGE_65_OVER" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="AGE_64" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="AGE_30" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="AGE_54" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q2 : 투자 가능 기간 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문2" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="INVS_PER_6" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_PER_12" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_PER_24" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_PER_36" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_PER_36_OVER" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q3 : 투자 가까운 금융투자상품(중복) -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문3" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_5_CLAS" type="check" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_4_CLAS" type="check" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_3_CLAS" type="check" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_2_CLAS" type="check" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_1_CLAS" type="check" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q4 : 금융상품 경험기간 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문4" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_0" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_12" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_36" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_60" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_60_OVER" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q5 : 금융투자상품 취득,처분목적 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문5" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_DEBT" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_LIV" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_AQD_HOME" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_ECSS_CASH" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_INCR_PRPT" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q6 : 금융투자지식수준 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문6" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="BSIC_0_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="BSIC_1_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="BSIC_2_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="BSIC_3_CLAS" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFourCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q7 : 투자수익위험태도 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문7" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="RISK_1_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="RISK_2_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="RISK_3_CLAS" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToThreeCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q8 : 총 자산규모 / 연매출 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문8" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="ASS_1HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="ASS_2HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="ASS_5HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW_OVER" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q9 : 향후 수입원 예상 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문9" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_3_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_2_CLAS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_1_CLAS" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToThreeCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q10 : 기대이익 수준 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문10" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_10" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_20" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_30" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_50" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_100" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- Q11 : 감내할 수 있는 손실 수준 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1질문11" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="LOSS_10" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="LOSS_20" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="LOSS_30" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="LOSS_50" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="LOSS_100" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <!-- 취약투자자 : 1.취약, 0.미취약 -->
+  <SetValueToDocumentMethod T_FieldId="2145_D1조회여부1" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToYesNoCheck" />
+  </SetValueToDocumentMethod>
+  <!-- 2145R : 보고서 호출 -->
+  <SetValueToDocumentMethod T_FieldId="2145R_D1고객명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="CUST_NM" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="CUST_NM" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1수량1" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="check_2145r" type="edit" value="" />
+   <FieldInfo documentId="1" formId="30100024" id="SUM" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="SUM" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문1" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="AGE" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="AGE" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문2" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="INVS_PER" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="INVS_PER" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문3" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="INVS_FINC" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="INVS_FINC" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문4" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="INVS_EXP" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="INVS_EXP" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문5" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="INVS_PPS" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="INVS_PPS" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문6" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="BSIC" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="BSIC" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문7" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="RISK" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="RISK" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문8" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="ASS" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="ASS" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문9" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="EXPT_SOC" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="EXPT_SOC" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문10" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="EXPTPRF" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="EXPTPRF" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1질문11" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="LOSS" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="LOSS" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1산출등급명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="PRPS" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="PRPS" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1투자성향특징" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="PRPS_ETC" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="PRPS_ETC" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_D1투자가능상품등급" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="FINCCLAS" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="FINCCLAS" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_주식투자권유동의" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="INVS_ADV" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="INVS_ADV" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2145R_취약투자자" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100024" id="INVS_VNR" type="edit" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100025" id="INVS_VNR" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <!-- 5404 -->
+  <SetValueToDocumentMethod T_FieldId="5404_D1계좌번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100036" id="ACNO" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="5404_D1신용금액" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100036" id="STOCK_AMUT_1" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="5404_D1변경전만기일" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100036" id="STOCK_BFR_1" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="5404_D1변경후만기일" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100036" id="STOCK_AFTER_1" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <!-- 2243 -->
+  <SetValueToDocumentMethod T_FieldId="2243_D1정보확인사원번호">
+   <FieldInfo documentId="1" formId="30100028" id="emp_no" type="edit" value="" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1개인법인구분">
+   <FieldInfo documentId="1" formId="30100031" id="INDV" type="radio" value="" />
+   <FieldInfo documentId="1" formId="30100031" id="CORP" type="radio" value="" />
+   <JavaScript id="numToTwoCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문1" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_PCS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_LOAN" type="radio" value="" runReactionRule="false" />
+   <JavaScript><![CDATA[function setValue(value) 
+        { 
+          var values = value.split("/");
+          var ret = "";
+          
+          ret += (values[0] == "0") ? "false|" : "true|";
+          ret += (values[1] == "0") ? "false" : "true";
+          return ret;
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문2" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_FINC" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_LIV" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_CORP_CASH" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_ETC" type="radio" value="" runReactionRule="false" />
+   <JavaScript><![CDATA[function setValue(value) 
+        { 
+          var values = value.split("/");
+          var ret = "";
+          
+          ret += (values[0] == "0") ? "false|" : "true|";
+          ret += (values[1] == "0") ? "false|" : "true|";
+          ret += (values[2] == "0") ? "false|" : "true|";
+          ret += (values[3] == "0") ? "false" : "true";
+          return ret;
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문3" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="AGE_19" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="AGE_31" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="AGE_51" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="AGE_65" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="AGE_80" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFiveCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문6" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="ASS_1HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="ASS_5HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW_OVER" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFourCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문4" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="EARN_30MW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="EARN_50MW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW_OVER" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFourCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문5" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="DET_30MW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="DET_50MW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="DET_1HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="DET_1HMW_OVER" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFourCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문8" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="LIV_30MW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="LIV_50MW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW_OVER" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToFourCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1질문7" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="RPAY_SALE" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="RPAY_SLRY" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="RPAY_RENT" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="RPAY_PENS" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="RPAY_BIZINCOM" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100030" id="RPAY_ETC" type="radio" value="" runReactionRule="false" />
+   <JavaScript id="numToSixCheck" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243_D1신용SCORE" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100030" id="CRRT" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <!-- 2243R -->
+  <SetValueToDocumentMethod T_FieldId="2243R_고객명" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100028" id="check_2243r" type="edit" value="" />
+   <FieldInfo documentId="1" formId="30100056" id="CUST_NM" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_고객번호" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="ACNO" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_대출용도" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="LOAN_RSN" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_연령" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="AGE" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_자산규모" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="ASS" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_연간소득" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="INCOM" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_부채" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="DET" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_고정지출" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="LIV" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_변제계획" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="RPAY" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_신용점수" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="CRDT" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_적정/부적정" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="Y" type="radio" value="" runReactionRule="false" />
+   <FieldInfo documentId="1" formId="30100056" id="N" type="radio" value="" runReactionRule="false" />
+   <JavaScript><![CDATA[function setValue(value)
+        {
+          if(value == "적정") return "true|false";
+          if(value == "부적정") return "false|true";
+          return "";
+        }]]></JavaScript>
+  </SetValueToDocumentMethod>
+  <SetValueToDocumentMethod T_FieldId="2243R_이유" method="SetValueToDocument">
+   <FieldInfo documentId="1" formId="30100056" id="RSN" type="edit" value="" runReactionRule="false" />
+  </SetValueToDocumentMethod>
+ </SetValueToDocumentMethods>
+ <!-- ******************** 서식 필드에 값이 입력되면 입력된 값에 따라 해야 할 일들을 정의 ******************** -->
+ <ReactionRules>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CUST_NM">
+   <Reaction>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100028" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100031" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100032" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100030" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100053" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100029" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100002" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100003" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100021" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100026" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100027" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100025" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM_1" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100029" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100033" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100034" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100035" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100029" id="CUST_NM" type="edit" usage="return" runReactionRule="false" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100022" id="CUST_NM" type="edit" usage="return" runReactionRule="false" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="ACNO">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkAcno" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100031" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100032" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100030" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100053" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100022" id="ACNO" type="edit" usage="return" runReactionRule="false" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="MPNO">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="MPNO" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript id="checkPhoneNum" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 신청, 변경, 해지 선택 동기화 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="APLY,APLY_1">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="APLY" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100028" id="APLY_1" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript><![CDATA[function allCheck(value)
+            {
+              return (value == "true") ? "true|true" : "false|false"; 
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CHG,CHG_1">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="CHG" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100028" id="CHG_1" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript><![CDATA[function allCheck(value)
+            {
+              return (value == "true") ? "true|true" : "false|false"; 
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CNCLTN,CNCLTN_1">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="CNCLTN" type="edit" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100028" id="CNCLTN_1" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript><![CDATA[function allCheck(value)
+            {
+              return (value == "true") ? "true|true" : "false|false"; 
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 신용구분/약정구분에 따른 약정금액/고객 유의사항 필수처리 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="APLY_1,CHG_1,CNCLTN_1,CRDT,STOCK_MOGG,SALE_STOCK_MOGG,SBSR_LOAN">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100028" id="APLY_1" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CRDT" type="radio" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="STOCK_MOGG" type="radio" value="" />
+     <JavaScript><![CDATA[function isCheck(empty, check, radio1, radio2)	
+            {
+              return (check == "true" && (radio1 == "true" || radio2 == "true")) ? "true" : "false"; 
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_1" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_2" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_4" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_5" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_1" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_2" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_4" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="P_IDNTY_5" type="pen" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100028" id="APLY_1" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CHG_1" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CRDT" type="radio" value="" />
+     <JavaScript><![CDATA[function isCheck(empty, radio1, radio2, check)	
+            {
+              return ((radio1 == "true" || radio2 == "true") && check == "true") ? "true" : "false"; 
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100028" id="CRDT_AMUT_1" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="CRDT_AMUT_2" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100028" id="CRDT_AMUT_1" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="CRDT_AMUT_2" type="pen" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100028" id="APLY_1" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CHG_1" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="STOCK_MOGG" type="radio" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="SALE_STOCK_MOGG" type="radio" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="SBSR_LOAN" type="radio" value="" />
+     <JavaScript><![CDATA[function isCheck(empty, radio1, radio2, check1, check2, check3)	
+            {
+              return ((radio1 == "true" || radio2 == "true") && (check1 == "true" || check2 == "true" || check3 == "true")) ? "true" : "false"; 
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100028" id="ETC_AMUT_1" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="ETC_AMUT_2" type="edit" essential="true" />
+    </Action>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="STOCK_MOGG" type="edit" usage="parameter" />
+     <FieldInfo documentId="1" formId="30100028" id="SALE_STOCK_MOGG" type="edit" usage="parameter" />
+     <FieldInfo documentId="1" formId="30100028" id="SBSR_LOAN" type="edit" usage="parameter" />
+     <FieldInfo documentId="1" formId="30100028" id="ETC" type="edit" usage="return" runReactionRule="false" />
+     <JavaScript><![CDATA[function isCheck(empty, check1, check2, check3)	
+            {
+              ret = "";
+              if(check1 == "true")  ret += ",증권담보융자";
+              if(check2 == "true")  ret += ",매도증권담보융자";
+              if(check3 == "true")  ret += ",청약자금대출";
+              return ret.substring(1);
+            }]]></JavaScript>
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100028" id="ETC" type="edit" value="" />
+     </Action>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100028" id="ETC_AMUT_1" type="edit" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="ETC_AMUT_2" type="edit" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 신용구분에 따른 안내내용 확인 필수처리 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CRDT">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_CRDT" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="RCV_EXPLN_CRDT" type="check" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_CRDT" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="RCV_EXPLN_CRDT" type="check" essential="false" />
+     </Action>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100028" id="CRDT_LOAN" type="check" value="false" />
+      <FieldInfo documentId="1" formId="30100028" id="CRDT_STOCK_LOAN" type="check" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="STOCK_MOGG">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_STOCR_MOGG" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="RCV_EXPLN_STOCR_MOGG" type="check" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_STOCR_MOGG" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="RCV_EXPLN_STOCR_MOGG" type="check" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="SALE_STOCK_MOGG">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_STOCR_MOGG" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100028" id="RCV_EXPLN_SALE_STOCK_MOGG" type="check" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_STOCR_MOGG" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100028" id="RCV_EXPLN_SALE_STOCK_MOGG" type="check" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="SBSR_LOAN">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_SBSR_LOAN" type="check" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100028" id="RCV_TRMS_SBSR_LOAN" type="check" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 융자 또는 대주 선택 시 신용거래 체크 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CRDT_LOAN,CRDT_STOCK_LOAN">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100028" id="CRDT_LOAN" type="check" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CRDT_STOCK_LOAN" type="check" value="" />
+     <JavaScript><![CDATA[function isCheck(empty, check1, check2)	
+            {
+              return (check1 == "true" || check2 == "true") ? "true" : "false"; 
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100028" id="CRDT" type="check" value="true" runReactionRule="false" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100028" id="CRDT" type="check" value="false" runReactionRule="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 융자일 때 신용거래 목적 필수/체크 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CRDT_LOAN">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_PCS" type="check" essential="true" />
+    </Action>
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_PCS" type="check" value="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="ShowHideField">
+      <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_PCS" type="check" value="false" />
+     </Action>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_PCS" type="check" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 대주일 때 신용거래 목적 필수/체크, 30100021 로드 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CRDT_STOCK_LOAN">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_LOAN" type="check" essential="true" />
+    </Action>
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_LOAN" type="check" value="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="ShowHideField">
+      <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_LOAN" type="check" value="false" />
+     </Action>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_LOAN" type="check" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="LoadForm">
+     <FormInfo documentId="1" formId="30100021" replace="false" oldDocumentId="" />
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100021" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100021" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100021" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100021" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100021" id="P_CUST_SIGN" type="pen" essential="false" />
+     </Action>
+     <Action method="DeleteForm">
+      <FormInfo documentId="1" formId="30100021" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 신용거래, 증권담보융자일때 30100026 로드 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="CRDT,STOCK_MOGG">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="LoadForm">
+     <FormInfo documentId="1" formId="30100026" replace="false" oldDocumentId="" />
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100026" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100026" id="TLNO_Y" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100026" id="TLNO_N" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100026" id="LOAN_Y" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100026" id="LOAN_N" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100026" id="CRRT_Y" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100026" id="CRRT_N" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100026" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100026" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100026" id="TLNO_Y" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100026" id="TLNO_N" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100026" id="LOAN_Y" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100026" id="LOAN_N" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100026" id="CRRT_Y" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100026" id="CRRT_N" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100026" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100026" id="P_CUST_SIGN" type="pen" essential="false" />
+     </Action>
+     <Action method="DeleteForm">
+      <FormInfo documentId="1" formId="30100026" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 증권담보융자, 매도증권담보융자일때 30100027 로드 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="STOCK_MOGG,SALE_STOCK_MOGG">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="LoadForm">
+     <FormInfo documentId="1" formId="30100027" replace="false" oldDocumentId="" />
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100027" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100027" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100027" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100027" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100027" id="P_CUST_SIGN" type="pen" essential="false" />
+     </Action>
+     <Action method="DeleteForm">
+      <FormInfo documentId="1" formId="30100027" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2243 : 신용공여 고객정보 확인서 - 개인,법인 필수처리 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="INDV,CORP">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="INDV" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100031" id="AGE_19" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="AGE_65_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="AGE_64" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="AGE_30" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="AGE_54" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="ASS_1HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="ASS_2HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="ASS_5HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="AGE_19" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="AGE_31" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="AGE_51" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="AGE_65" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="AGE_80" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="ASS_1HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="ASS_5HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="EARN_30MW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="EARN_50MW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="DET_30MW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="DET_50MW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="DET_1HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="DET_1HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="LIV_30MW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="LIV_50MW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="CRRT" type="edit" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100031" id="AGE_19" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="AGE_65_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="AGE_64" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="AGE_30" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="AGE_54" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="ASS_1HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="ASS_2HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="ASS_5HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="AGE_19" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="AGE_31" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="AGE_51" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="AGE_65" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="AGE_80" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="ASS_1HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="ASS_5HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="EARN_30MW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="EARN_50MW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="DET_30MW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="DET_50MW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="DET_1HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="DET_1HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="LIV_30MW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="LIV_50MW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="CRRT" type="edit" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="CORP" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100031" id="CPT_200HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CPT_200HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CPT_100HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CPT_50HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CPT_10HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_10HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_50HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_200HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_100HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_200HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="CPT_50HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="CPT_100HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="CPT_200HMW" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="CPT_200HMW_OVER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="NIC_1_CLAS" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="NIC_2_CLAS" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100030" id="NIC_3_CLAS" type="radio" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100031" id="CPT_200HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CPT_200HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CPT_100HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CPT_50HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CPT_10HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_10HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_50HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_200HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_100HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="CORP_ASS_200HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="CPT_50HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="CPT_100HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="CPT_200HMW" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="CPT_200HMW_OVER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="NIC_1_CLAS" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="NIC_2_CLAS" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100030" id="NIC_3_CLAS" type="radio" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 사전문진표 YES : 팝업 발생  -->
+  <SetValueCompleteField documentId="1" formId="30100026" fieldId="TLNO_Y,LOAN_Y,CRRT_Y">
+   <Reaction>
+    <Action method="ShowMessageBoxTablet" documentId="1">
+     <Message><![CDATA[다시 확인해주세요.]]></Message>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2290 : 개인(신용)정보 수집,이용,제공 동의 -->
+  <!-- 상세동의서 동의함 : 동시체크 -->
+  <SetValueCompleteField documentId="1" formId="30100002" fieldId="CST_RQ_GTHR_UID_Y,CST_RQ_GTHR_ID_Y,CST_RQ_OFFR_UID_Y,CST_RQ_OFFR_ID_Y,CST_RQ_INQR_UID_Y,CST_RQ_INQR_ID_Y">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_UID_Y" type="radio" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_ID_Y" type="radio" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_UID_Y" type="radio" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_ID_Y" type="radio" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_UID_Y" type="radio" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_ID_Y" type="radio" usage="return" runReactionRule="false" />
+     <JavaScript><![CDATA[function allCheck(value)
+            {
+              return (value == "true") ? "true|true|true|true|true|true" : "false|false|false|false|false|false"; 
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 상세동의서 동의하지않음 : 팝업 발생  -->
+  <SetValueCompleteField documentId="1" formId="30100002" fieldId="CST_RQ_GTHR_UID_N,CST_RQ_GTHR_ID_N,CST_RQ_OFFR_UID_N,CST_RQ_OFFR_ID_N,CST_RQ_INQR_UID_N,CST_RQ_INQR_ID_N">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="ShowMessageBoxTablet" documentId="1">
+     <Message><![CDATA[[동의하지 않음] 선택시, \n관련 상품 및 서비스의 체결,이행,(금융)거래관계의 설정 및 유지가 불가합니다.]]></Message>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 수집이용동의서 광고성 정보 수신 동시 체크 -->
+  <SetValueCompleteField documentId="1" formId="30100003" fieldId="CST_SELE_GTHR_ID_N,CST_SELE_ADS_N">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_N" type="radio" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_N" type="radio" usage="return" runReactionRule="false" />
+     <JavaScript><![CDATA[function allCheck(value)
+            {
+              return (value == "true") ? "true|true" : "false|false"; 
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100003" fieldId="CST_SELE_GTHR_ID_Y,CST_SELE_ADS_Y">
+   <Reaction>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_Y" type="radio" usage="return" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_Y" type="radio" usage="return" runReactionRule="false" />
+     <JavaScript><![CDATA[function allCheck(value)
+            {
+              return (value == "true") ? "true|true" : "false|false"; 
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 수집이용동의서 광고성 정보 수신 상세 체크 -->
+  <SetValueCompleteField documentId="1" formId="30100003" fieldId="CST_SELE_ADS_Y,CST_SELE_ADS_N">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_N" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_ALL" type="check" value="false" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_SMS" type="check" value="false" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_EMADR" type="check" value="false" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_MPNO" type="check" value="false" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_DM" type="check" value="false" runReactionRule="false" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100003" fieldId="CST_SELE_ADS_ALL">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_SMS" type="check" value="true" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_EMADR" type="check" value="true" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_MPNO" type="check" value="true" runReactionRule="false" />
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_DM" type="check" value="true" runReactionRule="false" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_SMS" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_EMADR" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_MPNO" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_DM" type="check" value="false" runReactionRule="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100003" fieldId="CST_SELE_ADS_ALL,CST_SELE_SMS,CST_SELE_EMADR,CST_SELE_MPNO,CST_SELE_DM">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isCheckTrue" />
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_Y" type="radio" value="true" runReactionRule="false" />
+    </Action>
+    <ElseReaction>
+     <Condition>
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_ALL" type="check" value="" />
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_SMS" type="check" value="" />
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_EMADR" type="check" value="" />
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_MPNO" type="check" value="" />
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_DM" type="check" value="" />
+      <JavaScript><![CDATA[function setValue(empty, check1, check2, check3, check4, check5)
+              {
+                return (check1=="false" && check2=="false" && check3=="false" && check4=="false" && check5=="false") ? "true" : "false";
+              }]]></JavaScript>
+     </Condition>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_Y" type="radio" value="false" runReactionRule="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2145 : 투자자정보 보고서 -->
+  <!-- 투자성향 한글 -> 숫자로 변경 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="cus_invest_type">
+   <Reaction>
+    <Condition>
+     <JavaScript id="returnTrue" />
+    </Condition>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="cus_invest_type_no" type="edit" usage="return" />
+     <JavaScript><![CDATA[function setGradeString(cus) 
+            {
+              if(cus == "공격투자형")  return "1";
+              if(cus == "적극투자형")  return "2";
+              if(cus == "위험중립형")  return "3";
+              if(cus == "안정추구형")  return "4";
+              if(cus == "안정형")      return "5";
+              
+              return "";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100032" id="P_PRPS" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="cus_invest_type" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 부적합(투자자성향 위험등급 3~5등급)일 경우 필수처리 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="cus_invest_type_no">
+   <Reaction>
+    <Condition>
+     <JavaScript><![CDATA[function checkValue(value) 
+            {
+              return (value >= "3") ? "true" : "false";
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100032" id="PRPS_N_IDNTY" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="P_PRPS" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="P_FINCCLAS" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="P_FINCCLAS_TXT" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="RISK_IDNTY" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="P_CUST_SIGN" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_1" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_2" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_3" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_4" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_5" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_6" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_7" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_8" type="check" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100032" id="PRPS_N_IDNTY" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_PRPS" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_FINCCLAS" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_FINCCLAS_TXT" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="RISK_IDNTY" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_SIGN" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_1" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_2" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_3" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_4" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_5" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_6" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_7" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_8" type="check" essential="false" />
+     </Action>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100032" id="PRPS_N_IDNTY" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_PRPS" type="pen" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_FINCCLAS" type="pen" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_FINCCLAS_TXT" type="pen" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="RISK_IDNTY" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_NM" type="pen" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_SIGN" type="pen" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_1" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_2" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_3" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_4" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_5" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_6" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_7" type="check" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_8" type="check" value="" runReactionRule="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 투자자성향 보고서 : 투자권유 희망하지 않음 선택시, 따라쓰기 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="INVS_ADV_Y,INVS_ADV_N">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="INVS_ADV_N" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100031" id="P_INVS_ADV_N" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100031" id="P_INVS_ADV_N" type="pen" value="" />
+     </Action>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100031" id="P_INVS_ADV_N" type="pen" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 투자자성향 보고서 : 정보제공 여부 선택시, 따라쓰기 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="INVS_INFO_Y,INVS_INFO_N">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="INVS_INFO_N" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100031" id="P_INVS_INFO_N" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100031" id="P_INVS_INFO_N" type="pen" value="" />
+     </Action>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100031" id="P_INVS_INFO_N" type="pen" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 기존정보와 동일 시 서명 필수 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="CHG,SAME">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="SAME" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100031" id="MNGR" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="P_MNGR_SIGN" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100031" id="MNGR" type="edit" value="" />
+      <FieldInfo documentId="1" formId="30100031" id="P_MNGR_SIGN" type="pen" value="" />
+     </Action>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100031" id="MNGR" type="edit" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="P_MNGR_SIGN" type="pen" essential="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 취약투자자 -->
+  <!-- 개인정보 수집/이용 동의 시 취약 체크 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="INVS_VNR_Y,INVS_VNR_N">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="INVS_VNR_Y" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 미성년자, 65세이상 투자자 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="AGE_19,AGE_30,AGE_54,AGE_64,AGE_65_OVER">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="AGE_19" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_MINOR" type="radio" value="true" />
+    </Action>
+    <ElseReaction>
+     <Condition>
+      <FieldInfo documentId="1" formId="30100031" id="AGE_65_OVER" type="radio" value="" />
+      <JavaScript id="isTrueWithEmpty" />
+     </Condition>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="true" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_65" type="radio" value="true" />
+     </Action>
+     <ElseReaction>
+      <Action method="SetValue">
+       <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="false" />
+       <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_MINOR" type="radio" value="false" />
+       <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_65" type="radio" value="false" />
+      </Action>
+     </ElseReaction>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 금융투자상품 무경험자 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="INVS_EXP_PER_0,INVS_EXP_PER_12,INVS_EXP_PER_36,INVS_EXP_PER_60,INVS_EXP_PER_60_OVER,BSIC_0_CLAS,BSIC_1_CLAS,BSIC_2_CLAS,BSIC_3_CLAS">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_0" type="radio" value="" />
+     <FieldInfo documentId="1" formId="30100031" id="BSIC_0_CLAS" type="radio" value="" />
+     <JavaScript><![CDATA[function setValueWithEmpty(empty, check1, check2) 
+            {
+              return (check1 == "true" || check2 == "true") ? "true" : "false";
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetValue">
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N_EXP" type="radio" value="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N_EXP" type="radio" value="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 취약투자자일 경우 필수체크 -->
+  <SetValueCompleteField documentId="1" formId="30100031" fieldId="MNGR_VNR_Y,MNGR_VNR_N">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="" />
+     <JavaScript id="isTrueWithEmpty" />
+    </Condition>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100031" id="INVS_VNR_Y" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="INVS_VNR_N" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_65" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_PENER" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_HSWF" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_MINOR" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N_EXP" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_ETC" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="RISK_IDNTY" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100032" id="P_CUST_SIGN" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_1" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_2" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_3" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_4" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_5" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_6" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_7" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="EXPLN_8" type="check" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="VNR_1" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="VNR_2" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="VNR_3" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="VNR_4" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100053" id="VNR_5" type="radio" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100031" id="INVS_VNR_Y" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="INVS_VNR_N" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_65" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_PENER" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_HSWF" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_MINOR" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N_EXP" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_ETC" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="RISK_IDNTY" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_SIGN" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_1" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_2" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_3" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_4" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_5" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_6" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_7" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_8" type="check" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_1" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_2" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_3" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_4" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_5" type="radio" essential="false" />
+     </Action>
+     <Action method="SetValue">
+      <FieldInfo documentId="1" formId="30100031" id="INVS_VNR_Y" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100031" id="INVS_VNR_N" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_65" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_PENER" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_HSWF" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_MINOR" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N_EXP" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_ETC" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="RISK_IDNTY" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_NM" type="pen" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100032" id="P_CUST_SIGN" type="pen" value="" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_1" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_2" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_3" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_4" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_5" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_6" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_7" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="EXPLN_8" type="check" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_1" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_2" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_3" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_4" type="radio" value="false" runReactionRule="false" />
+      <FieldInfo documentId="1" formId="30100053" id="VNR_5" type="radio" value="false" runReactionRule="false" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2145R -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="check_2145r">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="LoadForm">
+     <FormInfo documentId="1" formId="30100024" replace="false" oldDocumentId="" />
+     <FormInfo documentId="1" formId="30100025" replace="false" oldDocumentId="" />
+    </Action>
+    <Action method="SetValueEx">
+     <FieldInfo documentId="1" formId="30100028" id="cus_reg_no" type="edit" usage="parameter" />
+     <FieldInfo documentId="1" formId="30100025" id="IDNO" type="edit" usage="return" runReactionRule="true" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value.substr(0,7) + ("******");
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100025" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM_1" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM_1" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100024" id="CUST_NM" type="edit" value="" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM_1" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100025" id="CUST_NM" type="edit" value="" />
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100025" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100025" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100025" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100025" id="P_CUST_SIGN" type="pen" essential="false" />
+     </Action>
+     <Action method="DeleteForm">
+      <FormInfo documentId="1" formId="30100024" replace="false" oldDocumentId="" />
+      <FormInfo documentId="1" formId="30100025" replace="false" oldDocumentId="" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2243R -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="check_2243r">
+   <Reaction>
+    <Condition>
+     <JavaScript id="isNotNull" />
+    </Condition>
+    <Action method="LoadForm">
+     <FormInfo documentId="1" formId="30100056" replace="false" oldDocumentId="" />
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100056" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100056" id="CUST_NM" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100056" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100056" id="P_CUST_SIGN" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100056" id="P_MNGR_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100056" id="P_MNGR_SIGN" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100056" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100056" id="P_CUST_SIGN" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100056" id="P_MNGR_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100056" id="P_MNGR_SIGN" type="pen" essential="false" />
+     </Action>
+     <Action method="DeleteForm">
+      <FormInfo documentId="1" formId="30100056" replace="false" oldDocumentId="" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- 2408 : 약정구분에 따른 서식 로드 -->
+  <SetValueCompleteField documentId="1" formId="30100028" fieldId="APLY,CHG,CNCLTN">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100028" id="APLY" type="radio" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CHG" type="radio" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CNCLTN" type="radio" value="" />
+     <JavaScript><![CDATA[function checkRadio(empty, radio1, radio2, radio3)	
+            {
+              return (radio1 == "true" || radio2 == "true") ? "true" : "false"; 
+            }]]></JavaScript>
+    </Condition>
+    <Action method="LoadForm">
+     <FormInfo documentId="1" formId="30100029" replace="false" oldDocumentId="" />
+    </Action>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100029" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100029" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100029" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <ElseReaction>
+     <Action method="SetEssential">
+      <FieldInfo documentId="1" formId="30100029" id="P_CUST_NM" type="pen" essential="false" />
+      <FieldInfo documentId="1" formId="30100029" id="P_CUST_SIGN" type="pen" essential="false" />
+     </Action>
+     <Action method="DeleteForm">
+      <FormInfo documentId="1" formId="30100029" />
+     </Action>
+    </ElseReaction>
+   </Reaction>
+  </SetValueCompleteField>
+ </ReactionRules>
+ <!-- ******************** 서식 -> 단말 전송 ******************** -->
+ <SetValueToTerminalActions>
+  <!-- 전자문서를 호출한 단말 화면번호 -->
+  <MainTerminalScreenNo>2145</MainTerminalScreenNo>
+  <SetValueToTerminalScreen screenNo="2145">
+   <!-- M   E   T   A -->
+   <SetValueToTerminalMethod T_FieldId="meta_custNm">
+    <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="meta_accNo">
+    <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="meta_custPhone">
+    <FieldInfo documentId="1" formId="30100028" id="MPNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 2145 : 투자정보확인서 등룩/변경 -->
+   <SetValueToTerminalMethod T_FieldId="2145_D1처리구분">
+    <FieldInfo documentId="1" formId="30100031" id="SAME" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="CHG" type="radio" value="" />
+    <JavaScript><![CDATA[function setValue(check1, check2)
+            {
+              if(check1 == "true")  return "3";
+              if(check2 == "true")  return "2";
+              return "";
+            }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1고객구분">
+    <FieldInfo documentId="1" formId="30100028" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "1";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1정보확인사원번호">
+    <FieldInfo documentId="1" formId="30100028" id="emp_no" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1개인여부">
+    <FieldInfo documentId="1" formId="30100031" id="INDV" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="CORP" type="radio" value="" />
+    <JavaScript id="twoCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1개인법인구분">
+    <FieldInfo documentId="1" formId="30100031" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "1";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1정보제공구분">
+    <FieldInfo documentId="1" formId="30100031" id="INVS_INFO_Y" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_INFO_N" type="radio" value="" />
+    <JavaScript id="yesNoCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1투자권유구분">
+    <FieldInfo documentId="1" formId="30100031" id="INVS_ADV_Y" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_ADV_N" type="radio" value="" />
+    <JavaScript id="yesNoCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1본인대리인구분">
+    <FieldInfo documentId="1" formId="30100031" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "0";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1주식거래가능여부">
+    <FieldInfo documentId="1" formId="30100031" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "0";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1파생상품거래가능여부">
+    <FieldInfo documentId="1" formId="30100031" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "0";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1파생상품투자기간">
+    <FieldInfo documentId="1" formId="30100031" id="DRVT_INVS_PER_DT2Y" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="DRVT_INVS_PER_DTMM" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(year, month)
+          {
+            var ret = 0;
+            ret = Number(year)*12 + Number(month);
+            return ret;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1생년월일">
+    <FieldInfo documentId="1" formId="30100031" id="BRTH" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문1">
+    <FieldInfo documentId="1" formId="30100031" id="AGE_19" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="AGE_65_OVER" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="AGE_64" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="AGE_30" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="AGE_54" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문2">
+    <FieldInfo documentId="1" formId="30100031" id="INVS_PER_6" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_PER_12" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_PER_24" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_PER_36" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_PER_36_OVER" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문3">
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_5_CLAS" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_4_CLAS" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_3_CLAS" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_2_CLAS" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_1_CLAS" type="check" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문4">
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_0" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_12" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_36" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_60" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="INVS_EXP_PER_60_OVER" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문5">
+    <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_DEBT" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_LIV" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_AQD_HOUS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_ECSS_CASH" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="FINC_PPS_INCR_PRPT" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문6">
+    <FieldInfo documentId="1" formId="30100031" id="BSIC_0_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="BSIC_1_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="BSIC_2_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="BSIC_3_CLAS" type="radio" value="" />
+    <JavaScript id="fourCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문7">
+    <FieldInfo documentId="1" formId="30100031" id="RISK_1_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="RISK_2_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="RISK_3_CLAS" type="radio" value="" />
+    <JavaScript id="threeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문8">
+    <FieldInfo documentId="1" formId="30100031" id="ASS_1HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="ASS_2HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="ASS_5HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="ASS_10HMW_OVER" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문9">
+    <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_3_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_2_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="EXPT_SOC_1_CLAS" type="radio" value="" />
+    <JavaScript id="threeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문10">
+    <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_10" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_20" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_30" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_50" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="EXPTPRF_100" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1질문11">
+    <FieldInfo documentId="1" formId="30100031" id="LOSS_10" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="LOSS_20" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="LOSS_30" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="LOSS_50" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="LOSS_100" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2145_D1조회여부1">
+    <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_N" type="radio" value="" />
+    <JavaScript id="yesNoCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <!-- 2146 : 투자자체크리스트 등록/정정 -->
+   <SetValueToTerminalMethod T_FieldId="2146_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="cus_invest_type_no" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="cus_reg_no" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(vnr, invest, value)
+          {
+            return (vnr == "true" || invest >= "3") ? value : "";
+          }]]></JavaScript>
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="cus_invest_type_no" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(vnr, invest, value)
+          {
+            return (vnr == "true" || invest >= "3") ? value : "";
+          }]]></JavaScript>
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목1여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_2" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목2여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_3" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목3여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_4" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목4여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_6" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목5여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_5" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목6여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_1" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목7여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_7" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2146_D1항목8여부">
+    <FieldInfo documentId="1" formId="30100053" id="EXPLN_8" type="check" value="" />
+    <JavaScript id="trueCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <!-- 2147 : 부적합(부적정) 금융투자상품 거래확인서 등록/정정 -->
+   <SetValueToTerminalMethod T_FieldId="2147_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="cus_invest_type_no" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="cus_reg_no" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(vnr, invest, value)
+          {
+            return (vnr == "true" || invest >= "3") ? value : "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2147_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100031" id="MNGR_VNR_Y" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="cus_invest_type_no" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(vnr, invest, value)
+          {
+            return (vnr == "true" || invest >= "3") ? value : "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2243 : 신용공여 고객정보 확인서 -->
+   <SetValueToTerminalMethod T_FieldId="2243_D1정보확인사원번호">
+    <FieldInfo documentId="1" formId="30100028" id="emp_no" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1처리구분">
+    <FieldInfo documentId="1" formId="30100028" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "2";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1항목값1">
+    <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_PCS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="CRDT_PPS_STOCK_LOAN" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_FINC" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_LIV" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_CORP_CASH" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="MOGG_PPS_ETC" type="radio" value="" />
+    <JavaScript><![CDATA[function setValue(check1, check2, check3, check4, check5, check6)
+          {
+            var ret = "";
+            if	(check1 == "true")  ret += "10";
+            if	(check2 == "true")  ret += "20";
+            if	(check2 == "true")  ret += "30";
+            if	(check2 == "true")  ret += "40";
+            if	(check2 == "true")  ret += "50";
+            if	(check2 == "true")  ret += "60";
+            return ret;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1질문3">
+    <FieldInfo documentId="1" formId="30100030" id="AGE_19" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="AGE_31" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="AGE_51" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="AGE_65" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="AGE_80" type="radio" value="" />
+    <JavaScript id="fiveCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1질문6">
+    <FieldInfo documentId="1" formId="30100030" id="ASS_1HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="ASS_5HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="ASS_10HMW_OVER" type="radio" value="" />
+    <JavaScript id="fourCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1질문4">
+    <FieldInfo documentId="1" formId="30100030" id="EARN_30MW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="EARN_50MW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="EARN_1HMW_OVER" type="radio" value="" />
+    <JavaScript id="fourCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1질문5">
+    <FieldInfo documentId="1" formId="30100030" id="DET_30MW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="DET_50MW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="DET_1HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="DET_1HMW_OVER" type="radio" value="" />
+    <JavaScript id="fourCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1질문8">
+    <FieldInfo documentId="1" formId="30100030" id="LIV_30MW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="LIV_50MW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="LIV_1HMW_OVER" type="radio" value="" />
+    <JavaScript id="fourCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1신용SCORE">
+    <FieldInfo documentId="1" formId="30100030" id="CRRT" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_D1질문7">
+    <FieldInfo documentId="1" formId="30100030" id="RPAY_SALE" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="RPAY_SLRY" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="RPAY_RENT" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="RPAY_PENS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="RPAY_BIZINCOM" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="RPAY_ETC" type="radio" value="" />
+    <JavaScript id="fourCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_2(법인)">
+    <FieldInfo documentId="1" formId="30100030" id="CPT_50HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="CPT_100HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="CPT_200HMW" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="CPT_200HMW_OVER" type="radio" value="" />
+    <JavaScript id="fourCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2243_3(법인)">
+    <FieldInfo documentId="1" formId="30100030" id="NIC_1_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="NIC_2_CLAS" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100030" id="NIC_3_CLAS" type="radio" value="" />
+    <JavaScript id="threeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <!-- 2290 : 동의서 -->
+   <SetValueToTerminalMethod T_FieldId="2290_D1처리구분">
+    <FieldInfo documentId="1" formId="30100028" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "2";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100028" id="cus_reg_no" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부3">
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_UID_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_UID_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부15">
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_SST_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_SST_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부1">
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_ID_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_GTHR_ID_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부39">
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_UID_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_UID_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부13">
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_ID_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_OFFR_ID_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부38">
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_UID_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_UID_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부11">
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_ID_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100002" id="CST_RQ_INQR_ID_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1개인정보제공동의여부5">
+    <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_N" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100003" id="CST_SELE_GTHR_ID_Y" type="radio" value="" />
+    <JavaScript id="agreeCheckToNumm" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2290_D1항목값3">
+    <FieldInfo documentId="1" formId="30100003" id="CST_SELE_ADS_ALL" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100003" id="CST_SELE_SMS" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100003" id="CST_SELE_EMADR" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100003" id="CST_SELE_MPNO" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100003" id="CST_SELE_DM" type="check" value="" />
+    <JavaScript><![CDATA[function setValue(check1, check2, check3, check4, check5)
+          {
+            var ret = "";
+            if(check1=="true")  return "00";
+            if(check4=="true")  ret += "10";
+            if(check2=="true")  ret += "20";
+            if(check3=="true")  ret += "30";
+            if(check5=="true")  ret += "40";
+            return ret;
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2138 -->
+   <SetValueToTerminalMethod T_FieldId="2138_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100028" id="cus_reg_no" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2138_D1사유구분">
+    <FieldInfo documentId="1" formId="30100028" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setValue(tmp)
+          {
+            return "1";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2408 : 신용공여 약정서 -->
+   <SetValueToTerminalMethod T_FieldId="2408_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2408_D1계좌명">
+    <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2408_D1서비스유형코드">
+    <FieldInfo documentId="1" formId="30100028" id="CRDT" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="STOCK_MOGG" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="SALE_STOCK_MOGG" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="SBSR_LOAN" type="check" value="" />
+    <JavaScript><![CDATA[function setValue(value1, value2, value3, value4) 
+          {
+            if(value1 == "true") return "01";
+            if(value2 == "true") return "07";
+            if(value3 == "true") return "02";
+            if(value4 == "true") return "05";
+
+            return "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2408_D1처리구분">
+    <FieldInfo documentId="1" formId="30100028" id="APLY" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="CHG" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="CNCLTN" type="radio" value="" />
+    <JavaScript><![CDATA[function setValue(value1, value2, value3) 
+          {
+            if(value1 == "true") return "1";
+            if(value2 == "true") return "5";
+            if(value3 == "true") return "2";
+
+            return "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 2221 -->
+   <SetValueToTerminalMethod T_FieldId="2221_D1업무유형">
+    <FieldInfo documentId="1" formId="30100028" id="CRDT_STOCK_LOAN" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="tmp" type="edit" value="" />
+    <JavaScript><![CDATA[function setTmp(std, tmp)
+          {
+            return (std == "true") ? "2" : "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2221_D1실명확인번호">
+    <FieldInfo documentId="1" formId="30100028" id="CRDT_STOCK_LOAN" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="cus_reg_no" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="2221_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100028" id="CRDT_STOCK_LOAN" type="edit" value="" />
+    <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+    <JavaScript id="stdCheck" />
+   </SetValueToTerminalMethod>
+   <!-- 3133 -->
+   <SetValueToTerminalMethod T_FieldId="3133_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100037" id="STOCK_MOGG" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100037" id="APLY" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100037" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function stdCheck(std1, std2, value)
+          {
+            return (std1 == "true" && std2 == "true") ? value : "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 3117 -->
+   <SetValueToTerminalMethod T_FieldId="3117_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100037" id="SALE_STOCK_MOGG" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100037" id="APLY" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100037" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function stdCheck(std1, std2, value)
+          {
+            return (std1 == "true" && std2 == "true") ? value : "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 5210 -->
+   <SetValueToTerminalMethod T_FieldId="5210_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100037" id="CRDT" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100037" id="STOCK_MOGG" type="check" value="" />
+    <FieldInfo documentId="1" formId="30100037" id="DEBT" type="radio" value="" />
+    <FieldInfo documentId="1" formId="30100037" id="ACNO" type="edit" value="" />
+    <JavaScript><![CDATA[function stdCheck(std1, std2, std3, value)
+          {
+            return (std1 == "true" && std2 == "true" && std3 == "true") ? value : "";
+          }]]></JavaScript>
+   </SetValueToTerminalMethod>
+   <!-- 5404 -->
+   <SetValueToTerminalMethod T_FieldId="5404_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100036" id="ACNO" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="5404_D1신용금액">
+    <FieldInfo documentId="1" formId="30100036" id="STOCK_AMUT_1" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="5404_D1변경전만기일">
+    <FieldInfo documentId="1" formId="30100036" id="STOCK_BFR_1" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <SetValueToTerminalMethod T_FieldId="5404_D1변경후만기일">
+    <FieldInfo documentId="1" formId="30100036" id="STOCK_AFTER_1" type="edit" value="" />
+   </SetValueToTerminalMethod>
+   <!-- 9478 -->
+   <SetValueToTerminalMethod T_FieldId="9478_D1계좌번호">
+    <FieldInfo documentId="1" formId="30100022" id="ACNO" type="check" value="" />
+   </SetValueToTerminalMethod>
+  </SetValueToTerminalScreen>
+ </SetValueToTerminalActions>
+ <!-- ******************** 서식로드 이후에 해야 할 일을 정의 ******************** -->
+ <ProcessAfterFormLoadComplete>
+  <FormLoadComplete documentId="1" formId="30100033">
+   <Reaction>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100033" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100033" id="ACNO" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100033" id="MPNO" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100033" id="CUST_NM" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100033" id="BFR_AMUT" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100033" id="AFTR_AMUT" type="edit" essential="true" />
+     <FieldInfo documentId="1" formId="30100033" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100033" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100033" id="ACNO" type="edit" value="" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="MPNO" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100033" id="MPNO" type="edit" value="" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100033" id="CUST_NM" type="edit" value="" />
+    </Action>
+   </Reaction>
+  </FormLoadComplete>
+  <FormLoadComplete documentId="1" formId="30100034">
+   <Reaction>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100034" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100034" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100034" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100034" id="ACNO" type="edit" value="" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="MPNO" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100034" id="TLNO" type="edit" value="" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100034" id="CUST_NM" type="edit" value="" />
+    </Action>
+   </Reaction>
+  </FormLoadComplete>
+  <FormLoadComplete documentId="1" formId="30100035">
+   <Reaction>
+    <Action method="SetPlaceHolderWithMessage">
+     <FieldInfo documentId="1" formId="30100035" id="P_CUST_NM" type="pen" value="" />
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <JavaScript><![CDATA[function setName(empty, value)
+            {
+              return value + "|";
+            }]]></JavaScript>
+    </Action>
+    <Action method="SetEssential">
+     <FieldInfo documentId="1" formId="30100035" id="P_CUST_NM" type="pen" essential="true" />
+     <FieldInfo documentId="1" formId="30100034" id="P_CUST_SIGN" type="pen" essential="true" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="ACNO" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100035" id="ACNO" type="edit" value="" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="MPNO" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100035" id="TLNO" type="edit" value="" />
+    </Action>
+    <Action method="CopyFieldValue">
+     <FieldInfo documentId="1" formId="30100028" id="CUST_NM" type="edit" value="" />
+     <FieldInfo documentId="1" formId="30100035" id="CUST_NM" type="edit" value="" />
+    </Action>
+   </Reaction>
+  </FormLoadComplete>
+ </ProcessAfterFormLoadComplete>
+ <!-- ******************** 작성완료를 진행할 수 있는지 여부를 정의 ******************** -->
+</BusinessLogicXML>

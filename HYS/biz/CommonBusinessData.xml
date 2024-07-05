@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Common version="0.1">
+ <EccLimitYs>
+  <EccLimitY formId="I0000008" page="1" maxY="550" />
+ </EccLimitYs>
+</Common>

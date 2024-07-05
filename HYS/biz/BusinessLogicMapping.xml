@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessLogicMap version="0.1">
+ <BusinessLogicMappingInfo screenNo="2105" eds_biz_cd="0" businessId="EDS_OI000_01" businessName="계좌 약관및설명서" bizWorkCode="OPE" bizWorkName="계좌개설" subBizWorkCode="OI001" subBizWorkName="약관및설명서" showItem="false" />
+ <BusinessLogicMappingInfo screenNo="2105" eds_biz_cd="1" businessId="EDS_OP001_01" businessName="개인" bizWorkCode="OPE" bizWorkName="계좌개설" subBizWorkCode="OP001" subBizWorkName="종합계좌" />
+ <BusinessLogicMappingInfo screenNo="2105" eds_biz_cd="2" businessId="EDS_OP002_01" businessName="법인" bizWorkCode="OPE" bizWorkName="계좌개설" subBizWorkCode="OP002" subBizWorkName="종합계좌" />
+ 
+ 
+ <BusinessLogicMappingInfo screenNo="2151" eds_biz_cd="1" businessId="EDS_AD001_01" businessName="종합서비스" bizWorkCode="ADD" bizWorkName="부가서비스" subBizWorkCode="AD001" subBizWorkName="고객정보" />
+ 
+ <BusinessLogicMappingInfo screenNo="3001" eds_biz_cd="1" businessId="EDS_PY001_01" businessName="입금(3001)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY001" subBizWorkName="입출금전표" />
+ <BusinessLogicMappingInfo screenNo="3002" eds_biz_cd="1" businessId="EDS_PY001_02" businessName="출금(3002)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY001" subBizWorkName="입출금전표" />
+ <BusinessLogicMappingInfo screenNo="3531" eds_biz_cd="1" businessId="EDS_PY001_03" businessName="은행이체출금(3531)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY001" subBizWorkName="입출금전표" />
+ <BusinessLogicMappingInfo screenNo="3024" eds_biz_cd="1" businessId="EDS_PY001_04" businessName="계좌간자금대체(3024)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY001" subBizWorkName="입출금전표"/>
+ <BusinessLogicMappingInfo screenNo="3003" eds_biz_cd="1" businessId="EDS_PY001_07" businessName="취소_입금(3003)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY001" subBizWorkName="입출금전표" />
+ <BusinessLogicMappingInfo screenNo="3004" eds_biz_cd="1" businessId="EDS_PY001_08" businessName="취소_출금(3004)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY001" subBizWorkName="입출금전표" />
+ <BusinessLogicMappingInfo screenNo="3025" eds_biz_cd="1" businessId="EDS_PY001_09" businessName="취소_계좌간자금대체(3025)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY001" subBizWorkName="입출금전표" />
+ 
+
+
+ <BusinessLogicMappingInfo screenNo="3005" eds_biz_cd="1" businessId="EDS_PY002_01" businessName="입고(3005)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3006" eds_biz_cd="1" businessId="EDS_PY002_02" businessName="출고(3006)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3033" eds_biz_cd="1" businessId="EDS_PY002_03" businessName="타사대체입고(3033)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3034" eds_biz_cd="1" businessId="EDS_PY002_04" businessName="타사대체출고(3034)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3037" eds_biz_cd="1" businessId="EDS_PY002_05" businessName="CCF타사대체출고(3037)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3026" eds_biz_cd="1" businessId="EDS_PY002_06" businessName="계좌간유가증권대체(3026)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3007" eds_biz_cd="1" businessId="EDS_PY002_07" businessName="취소_입고(3007)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3008" eds_biz_cd="1" businessId="EDS_PY002_08" businessName="취소_출고(3008)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3035" eds_biz_cd="1" businessId="EDS_PY002_09" businessName="취소_타사대체입고(3035)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3036" eds_biz_cd="1" businessId="EDS_PY002_10" businessName="취소_타사대체출고(3036)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+ <BusinessLogicMappingInfo screenNo="3027" eds_biz_cd="1" businessId="EDS_PY002_11" businessName="취소_계좌간유가증권대체(3027)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY002" subBizWorkName="입출고전표" />
+
+ <BusinessLogicMappingInfo screenNo="2106" eds_biz_cd="1" businessId="EDS_PY003_01" businessName="계좌폐쇄(2106)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY003" subBizWorkName="계좌폐쇄등록취소전표" />
+
+ <BusinessLogicMappingInfo screenNo="7052" eds_biz_cd="1" businessId="EDS_PY004_01" businessName="RP매수결제(7052)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY004" subBizWorkName="환매채매매주문표"  />
+ <BusinessLogicMappingInfo screenNo="7054" eds_biz_cd="1" businessId="EDS_PY004_02" businessName="RP매도결제(7054)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY004" subBizWorkName="환매채매매주문표"  />
+ <BusinessLogicMappingInfo screenNo="7053" eds_biz_cd="1" businessId="EDS_PY004_03" businessName="취소_RP매수결제(7053)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY004" subBizWorkName="환매채매매주문표"  />
+ <BusinessLogicMappingInfo screenNo="7055" eds_biz_cd="1" businessId="EDS_PY004_04" businessName="취소_RP매도결제(7055)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY004" subBizWorkName="환매채매매주문표" />
+
+ 
+ <BusinessLogicMappingInfo screenNo="7602" eds_biz_cd="1" businessId="EDS_PY001_05" businessName="펀드매도(7602)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY005" subBizWorkName="펀드" />
+ <BusinessLogicMappingInfo screenNo="7603" eds_biz_cd="1" businessId="EDS_PY001_06" businessName="펀드매수(7603)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY005" subBizWorkName="펀드" />
+ <BusinessLogicMappingInfo screenNo="7605" eds_biz_cd="1" businessId="EDS_PY001_10" businessName="취소_펀드매매(7605)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY005" subBizWorkName="펀드" />
+
+ 
+ <BusinessLogicMappingInfo screenNo="1000" eds_biz_cd="1" businessId="EDS_PY005_01" businessName="매수주문(1000)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY005" subBizWorkName="주문표" showItem="false" />
+ <BusinessLogicMappingInfo screenNo="1000" eds_biz_cd="2" businessId="EDS_PY006_01" businessName="매도주문(1000)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY006" subBizWorkName="주문표" showItem="false" />
+ <BusinessLogicMappingInfo screenNo="1000" eds_biz_cd="3" businessId="EDS_PY007_01" businessName="정정취소주문(1000)" bizWorkCode="PYM" bizWorkName="전표" subBizWorkCode="PY007" subBizWorkName="주문표" showItem="false" />
+
+  
+ <BusinessLogicMappingInfo screenNo="2145" eds_biz_cd="1" businessId="EDS_CR001_01" businessName="신용공여" bizWorkCode="CRE" bizWorkName="신용공여" />
+ 
+ <Develop>
+  <BusinessLogicMappingInfo screenNo="ScreenNo" eds_biz_cd="bizCode" businessId="ScreenNo_bizCode" businessName="샘플 비즈로직" />
+  <BusinessLogicMappingInfo screenNo="TestScr" eds_biz_cd="1" businessId="Test" businessName="비즈로직 테스트" />
+ </Develop>
+</BusinessLogicMap>
