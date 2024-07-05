@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<forms modified="20240228175214" version="0.1">
+<forms modified="20240627170325" version="0.1">
  <total />
- <EDOC no="30100001" version="8.6" pdffileName="30100001.pdf" xmlfileName="30100001.xml" imgfileNames="" izsvfileName="" group="" type="" date="20231215114500" odsPrdCd="" nm="종합계좌개설신청서(개인)" />
- <EDOC no="30100002" version="2.1" pdffileName="30100002.pdf" xmlfileName="30100002.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230602172043" odsPrdCd="" nm="[필수] 수집,이용,제공,조회[상세동의서]" />
+ <EDOC no="30100001" version="8.8" pdffileName="30100001.pdf" xmlfileName="30100001.xml" imgfileNames="" izsvfileName="" group="" type="" date="20231215114500" odsPrdCd="" nm="종합계좌개설신청서(개인)" />
+ <EDOC no="30100002" version="2.2" pdffileName="30100002.pdf" xmlfileName="30100002.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230602172043" odsPrdCd="" nm="[필수] 수집,이용,제공,조회[상세동의서]" />
  <EDOC no="30100003" version="1.0" pdffileName="30100003.pdf" xmlfileName="30100003.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230602172139" odsPrdCd="" nm="[선택] 수집,이용[부가서비스 제공용]" />
  <EDOC no="30100004" version="1.2" pdffileName="30100004.pdf" xmlfileName="30100004.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230602172313" odsPrdCd="" nm="비거주자판정표" />
  <EDOC no="30100005" version="0.8" pdffileName="30100005.pdf" xmlfileName="30100005.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230602172346" odsPrdCd="" nm="방문계좌개설 수령확인증" />
@@ -24,16 +24,16 @@
  <EDOC no="30100021" version="0.3" pdffileName="30100021.pdf" xmlfileName="30100021.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619155007" odsPrdCd="" nm="공매도 관련 유상증자 참여제한 확인서" />
  <EDOC no="30100022" version="0.2" pdffileName="30100022.pdf" xmlfileName="30100022.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619155118" odsPrdCd="" nm="신용 및 증권담보융자 승인요청서" />
  <EDOC no="30100023" version="0.5" pdffileName="30100023.pdf" xmlfileName="30100023.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230615141212" odsPrdCd="" nm="환매조건부채권(RP) 거래 사전 동의서" />
- <EDOC no="30100024" version="1.1" pdffileName="30100024.pdf" xmlfileName="30100024.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230614125401" odsPrdCd="" nm="고객 투자성향 진단결과 확인서_고객용" />
- <EDOC no="30100025" version="2.0" pdffileName="30100025.pdf" xmlfileName="30100025.xml" imgfileNames="" izsvfileName="" group="" type="" date="20231215114500" odsPrdCd="" nm="고객 투자성향 진단결과 확인서_보관용" />
- <EDOC no="30100026" version="0.2" pdffileName="30100026.pdf" xmlfileName="30100026.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619155159" odsPrdCd="" nm="보이스피싱 예방을 위한 문진표" />
+ <EDOC no="30100024" version="1.2" pdffileName="30100024.pdf" xmlfileName="30100024.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230614125401" odsPrdCd="" nm="고객 투자성향 진단결과 확인서_고객용" />
+ <EDOC no="30100025" version="2.1" pdffileName="30100025.pdf" xmlfileName="30100025.xml" imgfileNames="" izsvfileName="" group="" type="" date="20231215114500" odsPrdCd="" nm="고객 투자성향 진단결과 확인서_보관용" />
+ <EDOC no="30100026" version="0.4" pdffileName="30100026.pdf" xmlfileName="30100026.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619155159" odsPrdCd="" nm="보이스피싱 예방을 위한 문진표" />
  <EDOC no="30100027" version="0.3" pdffileName="30100027.pdf" xmlfileName="30100027.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619155228" odsPrdCd="" nm="증권금융 담보활용 동의서, 철회서" />
- <EDOC no="30100028" version="2.0" pdffileName="30100028.pdf" xmlfileName="30100028.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230615141252" odsPrdCd="" nm="신용공여 약정서" />
- <EDOC no="30100029" version="0.5" pdffileName="30100029.pdf" xmlfileName="30100029.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230704152319" odsPrdCd="" nm="신용거래융자,대주 핵심설명서" />
- <EDOC no="30100030" version="1.0" pdffileName="30100030.pdf" xmlfileName="30100030.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230615141335" odsPrdCd="" nm="신용공여 고객정보 확인서" />
- <EDOC no="30100031" version="1.6" pdffileName="30100031.pdf" xmlfileName="30100031.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230615141407" odsPrdCd="" nm="일반금융소비자 정보 확인서" />
- <EDOC no="30100032" version="1.1" pdffileName="30100032.pdf" xmlfileName="30100032.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619154805" odsPrdCd="" nm="일반금융소비자 확인서" />
- <EDOC no="30100033" version="0.8" pdffileName="30100033.pdf" xmlfileName="30100033.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619154836" odsPrdCd="" nm="신용공여 한도추가 요청 신청서" />
+ <EDOC no="30100028" version="3.1" pdffileName="30100028.pdf" xmlfileName="30100028.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230615141252" odsPrdCd="" nm="신용공여 약정서" />
+ <EDOC no="30100029" version="0.8" pdffileName="30100029.pdf" xmlfileName="30100029.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230704152319" odsPrdCd="" nm="신용거래융자,대주 핵심설명서" />
+ <EDOC no="30100030" version="1.2" pdffileName="30100030.pdf" xmlfileName="30100030.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230615141335" odsPrdCd="" nm="신용공여 고객정보 확인서" />
+ <EDOC no="30100031" version="1.7" pdffileName="30100031.pdf" xmlfileName="30100031.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230615141407" odsPrdCd="" nm="일반금융소비자 정보 확인서" />
+ <EDOC no="30100032" version="1.3" pdffileName="30100032.pdf" xmlfileName="30100032.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619154805" odsPrdCd="" nm="일반금융소비자 확인서" />
+ <EDOC no="30100033" version="1.3" pdffileName="30100033.pdf" xmlfileName="30100033.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230619154836" odsPrdCd="" nm="신용공여 한도추가 요청 신청서" />
  <EDOC no="30100034" version="0.2" pdffileName="30100034.pdf" xmlfileName="30100034.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230622142112" odsPrdCd="" nm="신용거래융자 이자율 변경 신청서" />
  <EDOC no="30100035" version="0.2" pdffileName="30100035.pdf" xmlfileName="30100035.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230622142148" odsPrdCd="" nm="증권담보융자 이자율 변경 신청서" />
  <EDOC no="30100036" version="0.2" pdffileName="30100036.pdf" xmlfileName="30100036.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230622142219" odsPrdCd="" nm="만기연장 약정서" />
@@ -48,7 +48,7 @@
  <EDOC no="30100045" version="0.1" pdffileName="30100045.pdf" xmlfileName="30100045.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230703101222" odsPrdCd="" nm="청약거래약관" />
  <EDOC no="30100046" version="0.1" pdffileName="30100046.pdf" xmlfileName="30100046.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230703101307" odsPrdCd="" nm="파생상품계좌설정약관" />
  <EDOC no="30100047" version="0.2" pdffileName="30100047.pdf" xmlfileName="30100047.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230703101340" odsPrdCd="" nm="매매거래계좌설정약관" />
- <EDOC no="30100048" version="0.1" pdffileName="30100048.pdf" xmlfileName="30100048.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230703101432" odsPrdCd="" nm="장내파생상품거래설명서" />
+ <EDOC no="30100048" version="0.2" pdffileName="30100048.pdf" xmlfileName="30100048.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230703101432" odsPrdCd="" nm="장내파생상품거래설명서" />
  <EDOC no="30100049" version="0.1" pdffileName="30100049.pdf" xmlfileName="30100049.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230703101457" odsPrdCd="" nm="사이버 거래 시 유의사항" />
  <EDOC no="30100050" version="0.2" pdffileName="30100050.pdf" xmlfileName="30100050.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230703101520" odsPrdCd="" nm="홈트레이딩서비스이용약관" />
  <EDOC no="30100051" version="0.2" pdffileName="30100051.pdf" xmlfileName="30100051.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230704150107" odsPrdCd="" nm="주식워런트증권 거래설명서" />
@@ -56,7 +56,7 @@
  <EDOC no="30100053" version="0.2" pdffileName="30100053.pdf" xmlfileName="30100053.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230704152350" odsPrdCd="" nm="금융투자상품 판매점검 체크리스트" />
  <EDOC no="30100054" version="0.1" pdffileName="30100054.pdf" xmlfileName="30100054.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230707141123" odsPrdCd="" nm="종합계좌약관" />
  <EDOC no="30100055" version="0.5" pdffileName="30100055.pdf" xmlfileName="30100055.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230710103820" odsPrdCd="" nm="변동성 ETN 위험고지확인및거래등록신청서" />
- <EDOC no="30100056" version="0.1" pdffileName="30100056.pdf" xmlfileName="30100056.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230710131741" odsPrdCd="" nm="신용공여 적정성 판단 보고서" />
+ <EDOC no="30100056" version="0.2" pdffileName="30100056.pdf" xmlfileName="30100056.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230710131741" odsPrdCd="" nm="신용공여 적정성 판단 보고서" />
  <EDOC no="30100057" version="0.1" pdffileName="30100057.pdf" xmlfileName="30100057.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230725103355" odsPrdCd="" nm="ELW 약정계좌 기본예탁금 차등적용 등록,해지 신청서" />
  <EDOC no="30100058" version="0.1" pdffileName="30100058.pdf" xmlfileName="30100058.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230725103424" odsPrdCd="" nm="옵션순매수 서비스 신청서" />
  <EDOC no="30100059" version="0.1" pdffileName="30100059.pdf" xmlfileName="30100059.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230725103455" odsPrdCd="" nm="일임형 랩 계약서(고객용)" />
@@ -121,14 +121,14 @@
  <EDOC no="30100120" version="0.7" pdffileName="30100120.pdf" xmlfileName="30100120.xml" imgfileNames="" izsvfileName="" group="" type="" date="20231205140000" odsPrdCd="" nm="금융거래 목적 확인서" />
  <EDOC no="30100121" version="0.1" pdffileName="30100121.pdf" xmlfileName="30100121.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230824143433" odsPrdCd="" nm="대고객 환매조건부 매매약관" />
  <EDOC no="30100122" version="0.1" pdffileName="30100122.pdf" xmlfileName="30100122.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230824143522" odsPrdCd="" nm="기업어음증권 거래약관" />
- <EDOC no="30100123" version="1.6" pdffileName="30100123.pdf" xmlfileName="30100123.xml" imgfileNames="" izsvfileName="" group="" type="" date="20231215114500" odsPrdCd="" nm="종합계좌개설신청서(법인)" />
+ <EDOC no="30100123" version="1.8" pdffileName="30100123.pdf" xmlfileName="30100123.xml" imgfileNames="" izsvfileName="" group="" type="" date="20231215114500" odsPrdCd="" nm="종합계좌개설신청서(법인)" />
  <EDOC no="30100124" version="0.2" pdffileName="30100124.pdf" xmlfileName="30100124.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906145202" odsPrdCd="" nm="금융투자상품별 판매 체크리스트(펀드)" />
  <EDOC no="30100125" version="0.1" pdffileName="30100125.pdf" xmlfileName="30100125.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906145246" odsPrdCd="" nm="금융투자상품별 판매 체크리스트(파생)" />
  <EDOC no="30100126" version="0.1" pdffileName="30100126.pdf" xmlfileName="30100126.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906145334" odsPrdCd="" nm="금융투자상품별 판매 체크리스트(조건부자본증권)" />
  <EDOC no="30100127" version="0.1" pdffileName="30100127.pdf" xmlfileName="30100127.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906145414" odsPrdCd="" nm="금융투자상품별 판매 체크리스트(자산유동화증권)" />
  <EDOC no="30100128" version="0.1" pdffileName="30100128.pdf" xmlfileName="30100128.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906145513" odsPrdCd="" nm="잔고증명(잔고내역,거래내역 등) 발급신청서" />
- <EDOC no="30100129" version="0.6" pdffileName="30100129.pdf" xmlfileName="30100129.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906110443" odsPrdCd="" nm="고객 투자성향 진단결과 확인서(법인)_보관용" />
- <EDOC no="30100130" version="0.4" pdffileName="30100130.pdf" xmlfileName="30100130.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906110521" odsPrdCd="" nm="고객 투자성향 진단결과 확인서(법인)_고객용" />
+ <EDOC no="30100129" version="0.7" pdffileName="30100129.pdf" xmlfileName="30100129.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906110443" odsPrdCd="" nm="고객 투자성향 진단결과 확인서(법인)_보관용" />
+ <EDOC no="30100130" version="0.5" pdffileName="30100130.pdf" xmlfileName="30100130.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230906110521" odsPrdCd="" nm="고객 투자성향 진단결과 확인서(법인)_고객용" />
  <EDOC no="30100131" version="0.1" pdffileName="30100131.pdf" xmlfileName="30100131.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230912103331" odsPrdCd="" nm="실제소유자 확인서" />
  <EDOC no="30100900" version="1.7" pdffileName="30100900.pdf" xmlfileName="30100900.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230907104210" odsPrdCd="" nm="입금(3001)" />
  <EDOC no="30100901" version="1.6" pdffileName="30100901.pdf" xmlfileName="30100901.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230907104302" odsPrdCd="" nm="출금(3002)" />
@@ -155,4 +155,12 @@
  <EDOC no="30100922" version="0.9" pdffileName="30100922.pdf" xmlfileName="30100922.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230922142743" odsPrdCd="" nm="RP매도결제(7054)" />
  <EDOC no="30100923" version="0.7" pdffileName="30100923.pdf" xmlfileName="30100923.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230922142821" odsPrdCd="" nm="RP매수결제취소(7053)" />
  <EDOC no="30100924" version="0.7" pdffileName="30100924.pdf" xmlfileName="30100924.xml" imgfileNames="" izsvfileName="" group="" type="" date="20230922142917" odsPrdCd="" nm="RP매도결제취소(7055)" />
+ <EDOC no="30100132" version="0.1" pdffileName="30100132.pdf" xmlfileName="30100132.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240315092651" odsPrdCd="" nm="증권담보융자 설명서" />
+ <EDOC no="30100133" version="0.1" pdffileName="30100133.pdf" xmlfileName="30100133.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240315093625" odsPrdCd="" nm="신용거래약관" />
+ <EDOC no="30100135" version="0.1" pdffileName="30100135.pdf" xmlfileName="30100135.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240315094209" odsPrdCd="" nm="청약자금대출약관" />
+ <EDOC no="30100136" version="0.1" pdffileName="30100136.pdf" xmlfileName="30100136.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240315094341" odsPrdCd="" nm="매도담보 융자설명서" />
+ <EDOC no="30100137" version="0.1" pdffileName="30100137.pdf" xmlfileName="30100137.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240315094500" odsPrdCd="" nm="증권담보융자약관" />
+ <EDOC no="30100138" version="0.2" pdffileName="30100138.pdf" xmlfileName="30100138.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240315094604" odsPrdCd="" nm="관리계좌 삭제신청서" />
+ <EDOC no="30100139" version="0.2" pdffileName="30100139.pdf" xmlfileName="30100139.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240315094703" odsPrdCd="" nm="관리계좌 등록 고객동의서/확인" />
+ <EDOC no="30100140" version="0.1" pdffileName="30100140.pdf" xmlfileName="30100140.xml" imgfileNames="" izsvfileName="" group="" type="" date="20240523101258" odsPrdCd="" nm="신용거래 설명서" />
 </forms>

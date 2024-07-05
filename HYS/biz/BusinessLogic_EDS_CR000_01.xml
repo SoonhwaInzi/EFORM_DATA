@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessLogicXML id="EDS_CR000_01" version="0.1" title="신용공여_설명서">
+ <!-- 비즈니스 로직이 로드 되면 기본적으로 사용할 서식을 정의 -->
+ <OpenForms />
+ <!-- 최초 서식이 로드 되었을 때 기본적으로 필수 입력 필드로 설정해야 할 필드를 정의 -->
+ <EssentialFields />
+ <!-- 최초 서식이 로드되었을 때 입력 순서를 정의 -->
+ <FieldOrders />
+ <!-- 최초 서식이 로드 되었을 때 펜 필드의 Placeholder값을 정의 -->
+ <PlaceHolderFields />
+ <!-- 최초 서식이 로드 되었을 때 숨길 필드를 정의 -->
+ <HiddenFields />
+ <!-- 최초 서식이 로드 되었을 때 필드의 값을 정의 -->
+ <InitializeFieldValue />
+ <!-- 비즈니스 로직이 로드 된 후 수행해야 할 일들을 정의 -->
+ <ProcessAfterLogicLoadComplete />
+ <!-- 미리보기로 전환되기 전에 알림 메시지를 정의 -->
+ <PreviewMessage />
+ <!-- 단말에서 받은 값을 처리하는 방법을 정의 -->
+ <SetValueToDocumentMethods />
+ <!-- 서식 필드에 값이 입력되면 입력된 값에 따라 해야 할 일들을 정의 -->
+ <ReactionRules />
+ <!-- 서식 작성 내용을 단말에 전달하는 방법을 정의 -->
+ <SetValueToTerminalActions />
+ <!-- 단말로부터 받은 ECC정보를 출력할 페이지 정보를 정의 -->
+ <EccPages />
+ <!-- ECC를 받은 후 할 일을 정의 -->
+ <ProcessAfterReceiveECC />
+ <!-- 업무 완료 이후에 해야 할 일을 정의 -->
+ <ProcessAfterTaskComplete />
+ <!-- 서식로드 이후에 해야 할 일을 정의 -->
+ <ProcessAfterFormLoadComplete />
+ <!-- 작성완료를 진행할 수 있는지 여부를 정의 -->
+ <CanFillOutCompleteList />
+ <!-- 업무완료를 진행 할 수 있는지 여부를 정의 -->
+ <CanTaskCompleteList />
+</BusinessLogicXML>

@@ -48,6 +48,7 @@
 
   
  <BusinessLogicMappingInfo screenNo="2145" eds_biz_cd="1" businessId="EDS_CR001_01" businessName="신용공여" bizWorkCode="CRE" bizWorkName="신용공여" />
+ <BusinessLogicMappingInfo screenNo="2408" eds_biz_cd="0" businessId="EDS_CR000_01" businessName="신용공여 설명서" bizWorkCode="CRE" bizWorkName="신용공여" showItem="false"/>
  
  <Develop>
   <BusinessLogicMappingInfo screenNo="ScreenNo" eds_biz_cd="bizCode" businessId="ScreenNo_bizCode" businessName="샘플 비즈로직" />

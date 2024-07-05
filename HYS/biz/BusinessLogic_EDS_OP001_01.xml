@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BusinessLogicXML id="EDS_OP001_01" version="33.5" title="종합계좌개설_개인">
+<BusinessLogicXML id="EDS_OP001_01" version="33.9" title="종합계좌개설_개인">
  <OpenForms>
   <FormInfo documentId="1" formId="30100001" replace="false" />
   <FormInfo documentId="1" formId="30100002" replace="false" />
@@ -197,6 +197,22 @@
   <FieldInfo documentId="1" formId="30100001" id="CUST_STP_8" type="image" value="false" />
   <FieldInfo documentId="1" formId="30100002" id="CUST_STP" type="image" value="false" />
   <FieldInfo documentId="1" formId="30100003" id="CUST_STP" type="image" value="false" />
+  <!-- 3.5 취약시만 다중선택 변경가능 -->
+  <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_NO_EXP" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_ETC" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_65_OVER" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_PENER" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="check" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_ETC_TXT" type="edit" value="false" />
+  <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" value="false" />
+  <!-- ~3.5 -->
  </HiddenFields>
  <InitializeFieldValue>
   <FieldInfo documentId="1" formId="30100001" id="MPNO" type="edit" value="010" />
@@ -1640,6 +1656,24 @@
               return (value == "true") ? "true" : "false";
             }]]></JavaScript>
     </Condition>
+    <!--3.5 취약시만 다중선택 변경가능-->
+    <Action method="ShowHideField">
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_NO_EXP" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_ETC" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_65_OVER" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_PENER" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_ETC_TXT" type="edit" value="true" />
+     <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" value="true" />
+    </Action>
+    <!--~3.5 -->
     <Action method="SetEssential">
      <FieldInfo documentId="1" formId="30100001" id="VNR_1" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="VNR_2" type="radio" essential="true" />
@@ -1648,7 +1682,7 @@
      <FieldInfo documentId="1" formId="30100001" id="VNR_5" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_Y" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_N" type="radio" essential="true" />
-     <!--FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="true" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="radio" essential="true" />
@@ -1659,7 +1693,7 @@
      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="radio" essential="true" />
-     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="true" /-->
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="true" />
      <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" essential="true" />
     </Action>
     <ElseReaction>
@@ -1671,7 +1705,7 @@
       <FieldInfo documentId="1" formId="30100001" id="VNR_5" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_Y" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="INVS_VNR_N" type="radio" essential="false" />
-      <!--FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="false" />
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="radio" essential="false" />
@@ -1682,7 +1716,7 @@
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="radio" essential="false" />
-      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="false" /-->
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" essential="false" />
       <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" essential="false" />
      </Action>
      <Action method="SetValue">
@@ -1707,6 +1741,24 @@
       <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" value="false" runReactionRule="false" />
       <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" value="" runReactionRule="false" />
      </Action>
+     <!--3.5 취약시만 다중선택 변경가능-->
+     <Action method="ShowHideField">
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_NO_EXP" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_ETC" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_65_OVER" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_PENER" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="radio" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_ETC_TXT" type="edit" value="false" />
+      <FieldInfo documentId="1" formId="30100001" id="P_IDNTY_PRTC_VNR_EXPLN" type="pen" value="true" />
+     </Action>
+     <!--~3.5-->
     </ElseReaction>
    </Reaction>
   </SetValueCompleteField>
@@ -1740,6 +1792,9 @@
     </Condition>
     <Action method="SetEssential">
      <FieldInfo documentId="1" formId="30100001" id="P_INVS_INFO_N" type="pen" essential="true" />
+     <!--05.08 계좌개설-->
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_RCV_INVS_PRPS" type="radio" essential="false" />
+     <!--~05.08 계좌개설-->
     </Action>
     <ElseReaction>
      <Action method="SetValue">
@@ -1747,6 +1802,9 @@
      </Action>
      <Action method="SetEssential">
       <FieldInfo documentId="1" formId="30100001" id="P_INVS_INFO_N" type="pen" essential="false" />
+      <!--05.08 계좌개설-->
+      <FieldInfo documentId="1" formId="30100001" id="IDNTY_RCV_INVS_PRPS" type="radio" essential="true" />
+      <!--~05.08 계좌개설-->
      </Action>
     </ElseReaction>
    </Reaction>
@@ -3442,6 +3500,46 @@
     </ElseReaction>
    </Reaction>
   </SetValueCompleteField>
+  <!--3.5 취약시만 다중선택 변경가능 -->
+  <SetValueCompleteField documentId="1" formId="30100001" fieldId="MNGR_VNR_65,MNGR_VNR_PENER,MNGR_VNR_HSWF,MNGR_VNR_MINOR,MNGR_VNR_NO_EXP,MNGR_VNR_ETC">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_Y" type="check" value="" />
+     <JavaScript><![CDATA[function setValue(empty, value1)
+            {
+              return (value1 == "true") ? "true" : "false";
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssentialAtLeastOne">
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_65" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_PENER" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_HSWF" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_MINOR" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_NO_EXP" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_ETC" type="check" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <SetValueCompleteField documentId="1" formId="30100001" fieldId="IDNTY_PRTC_VNR_65_OVER,IDNTY_PRTC_VNR_PENER,IDNTY_PRTC_VNR_HSWF,IDNTY_PRTC_VNR_MINOR,IDNTY_PRTC_VNR_NO_EXP,MNGR_VNR_ETC">
+   <Reaction>
+    <Condition>
+     <FieldInfo documentId="1" formId="30100001" id="MNGR_VNR_Y" type="check" value="" />
+     <JavaScript><![CDATA[function setValue(empty, value1)
+            {
+              return (value1 == "true") ? "true" : "false";
+            }]]></JavaScript>
+    </Condition>
+    <Action method="SetEssentialAtLeastOne">
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_65_OVER" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_PENER" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_HSWF" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_MINOR" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_NO_EXP" type="check" />
+     <FieldInfo documentId="1" formId="30100001" id="IDNTY_PRTC_VNR_EXPLN_Y" type="check" />
+    </Action>
+   </Reaction>
+  </SetValueCompleteField>
+  <!-- ~3.5 -->
  </ReactionRules>
  <!-- ******************** 서식 -> 단말 전송 ******************** -->
  <SetValueToTerminalActions>
